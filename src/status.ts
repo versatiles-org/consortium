@@ -20,7 +20,20 @@ export const campaignStatus: CampaignStatus = {
 	sectors: [
 		{
 			id: 'public-broadcasters',
-			members: [],
+			members: [
+				{ name: 'ARD', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'BR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'HR', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'MDR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'NDR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'RBB', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'SR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'SWR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'WDR', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'ZDF', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'ORF', history: [{ status: 'planned', date: '2026-07-20' }] },
+				{ name: 'SRF', history: [{ status: 'planned', date: '2026-07-20' }] },
+			],
 		},
 		{
 			id: 'private-media',
