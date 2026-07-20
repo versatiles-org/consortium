@@ -15,7 +15,7 @@ VersaTiles ist mehr als nur ein kostenloses Werkzeug: Es ist eine **digitale, ö
 ### Der Plan:
 
 - Gemeinsam mit **zehn Organisationen gründen wir ein Konsortium** als eingetragenen Verein. Dieser hält alle Rechte, entscheidet gemeinsam über die strategische Ausrichtung, finanziert die Weiterentwicklung und sorgt dafür, dass VersaTiles langfristig frei und quelloffen bleibt.
-- **Jedes Gründungsmitglied trägt 700 € netto im Monat bei.** Darin enthalten sind die Kosten für den Betrieb der Infrastruktur, die Weiterentwicklung der Software, die Pflege der Kartendaten, sowie das Mitspracherecht über die zukünftige Ausrichtung. Wenn das Konsortium weiter wächst, können die Beiträge sinken da sich die Finanzierung auf mehr Schultern verteilt.
+- **Jedes Gründungsmitglied trägt 700 € netto im Monat bei.** Darin enthalten sind die Kosten für den Betrieb der Infrastruktur, die Weiterentwicklung der Software, die Pflege der Kartendaten sowie das Mitspracherecht über die zukünftige Ausrichtung. Wenn das Konsortium weiter wächst, können die Beiträge sinken, da sich die Finanzierung auf mehr Schultern verteilt.
 - **Das Konsortium betreibt VersaTiles für seine Mitglieder** und bietet ihnen damit ein zuverlässiges und souveränes Karten-Hosting. Das spart den Mitgliedern eigene Hosting- und Administrationskosten.
 
 <div id="cost-chart"></div>
