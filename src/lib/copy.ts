@@ -87,7 +87,12 @@ const UiSchema = z.object({
 		consortiumName: z.string(),
 		listPriceLimit: z.string(),
 	}),
-	footer: z.string(),
+	footer: z.object({
+		text: z.string(),
+		fix: z.string(),
+		repo: z.string(),
+		letter: z.string(),
+	}),
 });
 
 type UiCopy = z.infer<typeof UiSchema>;

@@ -155,7 +155,11 @@ faq:
         The members decide together how the money is spent.
   contactText: 'A question that is missing here?'
   contactCta: 'Get in touch'
-footer: 'VersaTiles is an open-source project.'
+footer:
+  text: 'VersaTiles is an open-source project.'
+  fix: 'Spotted an error?'
+  repo: 'Edit on GitHub'
+  letter: 'Letter source'
 chart:
   title: |-
     The more people use a map, the more it costs.

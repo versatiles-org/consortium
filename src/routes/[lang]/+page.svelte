@@ -59,4 +59,4 @@
 <!-- 6 — Direkte Unterstützung -->
 <Support t={t.support} />
 
-<SiteFooter t={t.footer} />
+<SiteFooter t={t.footer} {lang} />

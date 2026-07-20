@@ -212,4 +212,8 @@ faq:
         Letztlich entscheiden die Mitglieder gemeinsam über die Verwendung der Mittel.
   contactText: 'Eine Frage, die hier fehlt?'
   contactCta: 'Schreib mir'
-footer: 'VersaTiles ist ein Open-Source-Projekt.'
+footer:
+  text: 'VersaTiles ist ein Open-Source-Projekt.'
+  fix: 'Einen Fehler entdeckt?'
+  repo: 'Auf GitHub bearbeiten'
+  letter: 'Text des Briefs'
