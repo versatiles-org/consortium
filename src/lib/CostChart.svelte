@@ -1,16 +1,9 @@
 <script lang="ts">
 	import Lines from '$lib/Lines.svelte';
 	import { costSeries, MAX_USERS, LIST_PRICE_LIMIT } from '$lib/costModel.js';
+	import type { Copy } from '$lib/copy.js';
 
-	interface ChartCopy {
-		title: string;
-		axisX: string;
-		axisY: string;
-		note: string;
-		consortiumName: string;
-		listPriceLimit: string;
-	}
-	let { t, lang }: { t: ChartCopy; lang: string } = $props();
+	let { t, lang }: { t: Copy['chart']; lang: string } = $props();
 
 	// ── geometry (viewBox units) ──
 	// The SVG is scaled to its container, so a 760-unit viewBox on a 350px phone shrinks
