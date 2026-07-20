@@ -1,0 +1,49 @@
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
+import svelte from 'eslint-plugin-svelte';
+import prettier from 'eslint-config-prettier';
+import globals from 'globals';
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+	js.configs.recommended,
+	...ts.configs.recommended,
+	...svelte.configs['flat/recommended'],
+	prettier,
+	...svelte.configs['flat/prettier'],
+	{
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.node,
+			},
+		},
+		rules: {
+			// Single static page: hash anchors, mailto and external links only – no app routing.
+			'svelte/no-navigation-without-resolve': 'off',
+			'no-unused-vars': 'off',
+			'@typescript-eslint/no-unused-vars': [
+				'error',
+				{
+					argsIgnorePattern: '^_',
+					varsIgnorePattern: '^_',
+					caughtErrorsIgnorePattern: '^_',
+				},
+			],
+		},
+	},
+	{
+		files: ['**/*.svelte'],
+		languageOptions: {
+			parserOptions: {
+				parser: ts.parser,
+				svelteFeatures: {
+					experimentalGenerics: true,
+				},
+			},
+		},
+	},
+	{
+		ignores: ['build/', '.svelte-kit/', 'dist/', '.github/', 'node_modules/'],
+	},
+];

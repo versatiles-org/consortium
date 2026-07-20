@@ -1,0 +1,289 @@
+/* Inter, self-hosted (OFL, see src/lib/fonts/Inter-LICENSE.txt). Google serves it as a
+   variable font, so one 48 KB latin file covers every weight we use. It is loaded for
+   headings only — body copy stays on the system font.
+   The OG images render this same face, so the sharing card and the hero match; that is
+   only true because the file ships with the repo instead of coming from the OS.
+   The url() is resolved by Vite (hashed, base-path aware) — a /fonts/… path would 404
+   under BASE_PATH=/consortium. */
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('../lib/fonts/inter-latin.woff2') format('woff2');
+}
+
+/* Metrics-matched stand-in for the system font, so swapping in Inter does not reflow
+   the hero (the biggest text on the page). Values from the Inter project. */
+@font-face {
+	font-family: 'Inter Fallback';
+	src: local('Helvetica Neue'), local('Arial'), local('Segoe UI'), local('Roboto');
+	ascent-override: 90%;
+	descent-override: 22.43%;
+	line-gap-override: 0%;
+	size-adjust: 107.12%;
+}
+
+:root {
+	/* VersaTiles brand tokens (from versatiles.org) */
+	--bg: #1b1b1f;
+	--surface: #26262b;
+	--surface-hover: #2e2e34;
+	--text: #ccc;
+	--text-strong: #fff;
+	--text-muted: #9a9aa2;
+	--line: #333;
+
+	--purple: #9d35ff;
+	--purple-deep: #6b0075;
+	--lime: #93a813;
+	--green: #005034;
+	--brand-gradient: linear-gradient(60deg, #6b0075, #9d35ff 40%, #93a813 65%, #005034);
+	--accept: #2e9e4f;
+	/* founding members + accepted status */
+	--decline: #9e2e2e;
+	/* declined status */
+	--discuss: #9e7d2e;
+	/* in-talks status */
+
+	--maxw: 64rem;
+	--maxw-narrow: 42rem;
+	--radius: 8px;
+	--font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	--font-heading: 'Inter', 'Inter Fallback', var(--font-sans);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.5;
+	color-scheme: dark;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+
+a:hover {
+	color: var(--text-strong);
+}
+
+:focus-visible {
+	outline: 2px solid var(--purple);
+	outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--text-strong);
+	font-family: var(--font-heading);
+	font-weight: 600;
+	line-height: 1.15;
+	margin: 0 0 0.6em;
+	letter-spacing: -0.015em;
+}
+
+/* Match versatiles.org: em is bold, not italic */
+em {
+	font-style: normal;
+	font-weight: 700;
+}
+
+/* ---- Shared utilities (used by both +layout and +page) ---- */
+.container {
+	width: 100%;
+	max-width: var(--maxw);
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.container--narrow {
+	max-width: var(--maxw-narrow);
+}
+
+.actions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 1.75rem;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.8rem 1.5rem;
+	border-radius: var(--radius);
+	font-weight: 600;
+	text-decoration: none;
+	border: 1px solid transparent;
+	transition:
+		background 0.15s ease,
+		border-color 0.15s ease,
+		transform 0.08s ease;
+}
+
+.btn:hover {
+	color: var(--text-strong);
+	text-decoration: none;
+	transform: translateY(-1px);
+}
+
+.btn--primary {
+	background: var(--purple);
+	color: var(--text-strong);
+}
+
+.btn--primary:hover {
+	background: var(--purple-deep);
+}
+
+.btn--ghost {
+	border-color: var(--line);
+	color: var(--text-strong);
+}
+
+.btn--ghost:hover {
+	border-color: var(--purple);
+}
+
+/* ---- Open letter ----
+   These rules style the Markdown injected via {@html} in +page.svelte and must
+   stay GLOBAL: Svelte scopes template elements only, not {@html} output, so a
+   component-scoped `.letter blockquote` would never match the rendered nodes. */
+.letter {
+	padding: clamp(3rem, 7vw, 5rem) 0;
+
+	h2 {
+		font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+
+	h3 {
+		margin-top: 2rem;
+		font-size: 1.2rem;
+	}
+
+	p,
+	li {
+		font-size: 1.12rem;
+		line-height: 1.65;
+		color: var(--text);
+	}
+
+	blockquote {
+		margin: 1.5rem 0;
+		padding: 0;
+		border: 0;
+		font-weight: 700;
+		font-size: 1.35rem;
+		color: var(--text-strong);
+
+		p {
+			margin: 0;
+		}
+	}
+
+	ul {
+		padding-left: 1.2rem;
+	}
+
+	li {
+		margin-bottom: 0.9rem;
+	}
+
+	li::marker {
+		color: var(--purple);
+	}
+}
+
+/* ---- Print ----
+   The site is dark-themed, so on paper the light text prints as pale grey (headings in
+   #fff nearly vanish) and the video players print as black boxes. This flips the brand
+   tokens to dark-on-white, drops the interactive chrome (nav, videos, hero loop), turns
+   buttons into plain text links, and forces the FAQ <details> open so the answers print. */
+@media print {
+	:root {
+		--bg: #fff;
+		--surface: #fff;
+		--surface-hover: #fff;
+		--text: #1a1a1a;
+		--text-strong: #000;
+		--text-muted: #555;
+		--line: #c9c9c9;
+	}
+	html {
+		scroll-behavior: auto;
+	}
+	body {
+		background: #fff;
+		color: #1a1a1a;
+		color-scheme: light;
+	}
+	@page {
+		margin: 1.6cm;
+	}
+
+	/* interactive / non-printable parts */
+	.site-nav,
+	.hero-visual-wrap,
+	.video__player {
+		display: none !important;
+	}
+	.demos {
+		background: none;
+	}
+
+	/* buttons → plain underlined text (a filled box wastes ink and its label may vanish) */
+	.btn {
+		display: inline;
+		padding: 0;
+		border: 0;
+		background: none !important;
+		color: #000 !important;
+		font-weight: 600;
+		text-decoration: underline;
+	}
+	a {
+		color: #000;
+	}
+
+	/* The FAQ <details> are opened for print by a matchMedia('print') handler in +layout;
+	   CSS alone cannot reveal a collapsed <details>. */
+
+	/* break hygiene: keep headings with their content and don't split key blocks */
+	h1,
+	h2,
+	h3,
+	h4,
+	summary {
+		break-after: avoid;
+	}
+	figure.cost-chart,
+	.video,
+	.faq li,
+	.sector {
+		break-inside: avoid;
+	}
+	img,
+	svg {
+		max-width: 100% !important;
+	}
+}

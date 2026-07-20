@@ -1,0 +1,167 @@
+meta:
+  title: 'VersaTiles Consortium – Break free from the platform economy'
+  description: 'Maps are infrastructure. We are looking for ten organisations to found the first European open-source map consortium with us – for real digital sovereignty.'
+  ogImage:
+    line1: 'Open source software is infrastructure.'
+    line2: 'Everyone can use it.'
+    line3: 'Somebody has to fund it.'
+    sub: 'Ten organisations. One consortium. Open maps for everyone.'
+hero:
+  kicker: 'Open source is infrastructure. Somebody has to fund it.'
+  title1: 'Break free from the platform economy.'
+  title2: "Let's make infrastructure open and shared again."
+  lead: 'Maps are infrastructure today – yet almost everyone rents them from a handful of large, overpriced platforms. VersaTiles shows that it can be open, independent and many times cheaper. We are now looking for ten organisations to found the first European open-source map consortium with us – for real digital sovereignty.'
+  ctaPrimary: 'Read the call'
+  ctaSecondary: 'Explore VersaTiles'
+banner:
+  heading: 'We are looking for 10 partners to found the first open-source map consortium.'
+  countLabel: 'founding seats filled'
+  sectorsHeading: 'We are reaching out to organisations from these sectors:'
+  legend:
+    contacted: 'contacted'
+    discussion: 'in talks'
+    accepted: 'accepted'
+    declined: 'declined'
+  sectorGroups:
+    public-broadcasters: 'Public broadcasters'
+    private-media: 'Private media'
+    companies: 'Companies'
+    authorities: 'Public authorities'
+letter:
+  heading: "Maps are infrastructure. It's time we treated them that way."
+  ctaPrimary: 'Become a founding member'
+  ctaSecondary: 'Get in touch'
+  signature: 'Michael Kreil — data journalist, founder of VersaTiles'
+demos:
+  heading: 'How VersaTiles works'
+  linksHeading: 'Shown in the video'
+  videos:
+    intro:
+      title: 'Introduction'
+      description: 'What VersaTiles is, why it exists, and how the parts – data, server, frontend – fit together.'
+      links:
+        - { label: 'VersaTiles website', url: 'https://versatiles.org' }
+        - { label: 'Demo map server', url: 'https://tiles.versatiles.org' }
+        - { label: 'Showcases', url: 'https://docs.versatiles.org/showcases/' }
+        - { label: 'Playground', url: 'https://versatiles.org/playground/' }
+        - { label: 'Set up a server (tool)', url: 'https://versatiles.org/tools/setup_server' }
+        - { label: 'Documentation', url: 'https://docs.versatiles.org/' }
+        - {
+            label: 'Reference model (spec)',
+            url: 'https://docs.versatiles.org/compendium/specification_reference_model.html',
+          }
+    server:
+      title: 'The server'
+      description: 'How VersaTiles serves map tiles – the different implementations and how to run your own.'
+      links:
+        - label: 'Implementations'
+          links:
+            - { label: 'versatiles-rs (Rust)', url: 'https://github.com/versatiles-org/versatiles-rs/' }
+            - { label: 'node-versatiles-server', url: 'https://github.com/versatiles-org/node-versatiles-server/' }
+            - {
+                label: 'node-versatiles-google-cloud',
+                url: 'https://github.com/versatiles-org/node-versatiles-google-cloud',
+              }
+            - { label: 'versatiles-docker', url: 'https://github.com/versatiles-org/versatiles-docker' }
+        - { label: 'Set up a server (tool)', url: 'https://versatiles.org/tools/setup_server' }
+    data:
+      title: 'The map data'
+      description: 'Where the maps come from: data sources, the container format, and how to build your own tiles.'
+      links:
+        - { label: 'Download server (map data)', url: 'https://download.versatiles.org/' }
+        - {
+            label: 'Container format (spec)',
+            url: 'https://docs.versatiles.org/compendium/specification_container.html',
+          }
+        - label: 'OpenStreetMap'
+          links:
+            - { label: 'Shortbread schema', url: 'https://shortbread-tiles.org' }
+            - {
+                label: 'Planetiler (Shortbread profile)',
+                url: 'https://github.com/versatiles-org/planetiler/tree/feature/shortbread-java-profile',
+              }
+            - { label: 'Landcover vectors', url: 'https://github.com/versatiles-org/landcover-vectors' }
+        - { label: 'Orthophotos', url: 'https://github.com/versatiles-org/orthophotos' }
+        - { label: 'Mapterhorn (elevation)', url: 'https://mapterhorn.com/' }
+        - {
+            label: 'VersaTiles Pipeline',
+            url: 'https://github.com/versatiles-org/versatiles-rs/tree/main/versatiles_pipeline',
+          }
+    frontend:
+      title: 'The frontend'
+      description: 'What happens in the browser: styles, fonts, libraries and tools for interactive maps.'
+      links:
+        - label: 'Specification'
+          links:
+            - {
+                label: 'Extended TileJSON',
+                url: 'https://docs.versatiles.org/compendium/specification_extended_tilejson.html',
+              }
+            - { label: 'Frontend', url: 'https://docs.versatiles.org/compendium/specification_frontend.html' }
+        - label: 'Libraries & tools'
+          links:
+            - { label: 'Frontend repository', url: 'https://github.com/versatiles-org/versatiles-frontend/' }
+            - { label: 'Fonts', url: 'https://github.com/versatiles-org/versatiles-fonts' }
+            - { label: 'Glyph rendering', url: 'https://github.com/versatiles-org/versatiles-glyphs-rs' }
+            - { label: 'Style engine', url: 'https://github.com/versatiles-org/versatiles-style' }
+            - { label: 'MapLibre style editor', url: 'https://github.com/versatiles-org/maplibre-versatiles-styler' }
+            - { label: 'SVG export', url: 'https://github.com/versatiles-org/versatiles-svg-renderer' }
+            - { label: 'SVG export (demo)', url: 'https://versatiles.org/versatiles-svg-renderer/demo/index.html' }
+            - { label: 'Svelte components', url: 'https://github.com/versatiles-org/node-versatiles-svelte/' }
+            - { label: 'Map editor', url: 'https://versatiles.org/node-versatiles-svelte/map-editor' }
+            - { label: 'Animation editor', url: 'https://versatiles.org/versatiles-map-animation/' }
+support:
+  heading: 'Every contribution keeps VersaTiles independent.'
+  text: 'Not an organisation, but still want to help? Not everyone can become a founding member – but every contribution helps secure ongoing development and keep VersaTiles independent. One-off or recurring:'
+faq:
+  heading: 'Questions your organisation will ask'
+  items:
+    - q: 'What does membership cost – and when is the money due?'
+      a: '700 € per month, i.e. 8,400 € per year – net, plus VAT, payable as an annual fee. No money changes hands before the consortium exists: the fee is only due once it has actually been founded. Saying yes now is a declaration of intent, not an invoice.'
+    - q: 'What if ten organisations do not come together?'
+      a: |-
+        Then there is no founding, and nobody pays anything. Ten members is the threshold at which the budget carries operations and ongoing development. Below that the promise could not be kept.
+        VersaTiles would not disappear – the code and the data are open and will stay open. But it would stand still: without funding there is nobody to maintain the software, keep the map data current and run the infrastructure.
+    - q: 'What are we committing to, and how do we get out?'
+      a: 'The founding assembly adopts the bylaws – that is you, together with us. My proposal for them: membership can be cancelled at the end of any year. Fees are payable once a year.'
+    - q: 'What do we get for the fee?'
+      a: |-
+        1. Map hosting: every member gets a ready-to-use map infrastructure – no servers of your own, and no contract with a provider outside the EU.
+        2. A say in where VersaTiles goes next: the level of the membership fee, whether the focus is on quality assurance, IT security or new features, and the technical specifications themselves.
+        3. Permanence: development is funded for the long run and does not sit with a provider who can discontinue, sell or reprice it.
+        4. Visibility as an organisation that does not merely call for digital sovereignty but pays for it.
+    - q: 'Where are the servers, and is this GDPR-compliant?'
+      a: |-
+        The map infrastructure runs with a provider inside the EU. That much is settled – it is the whole point: maps from within European jurisdiction, with no data transfer to the US. Which provider it will be is for the members to decide.
+        They also decide how access data is handled – whether and for how long logs are kept – and whether the consortium offers its members a data processing agreement under Art. 28 GDPR. Every map infrastructure has to answer these questions. Answering them together, rather than having them dictated by a vendor, is one of the reasons for the consortium.
+        And regardless of all that: because VersaTiles is open source, any organisation can additionally run it in-house – then the data never leaves your own data centre.
+    - q: 'We already use VersaTiles for free. Why would we pay?'
+      a: 'Because that is exactly the question open infrastructure fails on. VersaTiles is free to use and will stay that way. But servers, map data and development cost money – and so far a single person carries all of it. Relying on VersaTiles without helping to carry it means relying on something nobody can guarantee you. The consortium turns it into a commitment you can count on.'
+    - q: 'Who decides in the consortium?'
+      a: 'The consortium is a registered association: one member, one vote – regardless of the size of the organisation. A national broadcaster carries the same weight as a public authority or a mid-sized company. The founding members write the bylaws together.'
+    - q: 'Why an association and not a company?'
+      a: |-
+        Because a company has shareholders – and anything with shares can be bought. That is precisely the problem we are trying to solve: infrastructure that newsrooms, public authorities and companies rely on must not be sellable, must not be taken over, and must not be tuned for returns. An association has no owners, only members. There is nothing to sell.
+        Then there is power: in a company, votes follow capital – whoever pays most decides most. In an association, every member has one vote, regardless of size. And surpluses are not paid out; they flow back into development and operations.
+        It is also the easier route in practice: membership is a decision you can take, and cancel at the end of any year. A shareholding would have to be acquired, valued and eventually sold again – for a public authority, a process that prevents a commitment rather than enabling one.
+        Should operations later require an operating company, the association can found one. The rights to VersaTiles would remain with the association in any case.
+    - q: 'How dependent is VersaTiles on individual people?'
+      a: |-
+        Today, heavily: VersaTiles was started by Michael Kreil and is still developed largely by him. If he were unavailable, the project would stand still. That is the biggest risk it carries – and the main reason for the consortium.
+        In the medium term at least three people need to be able to oversee and take responsibility for the development of VersaTiles. That is the first task the consortium has to tackle together – and it is solvable with a budget, but not without one.
+    - q: 'What are the membership fees used for?'
+      a: |-
+        Mainly for the development of VersaTiles and for running the infrastructure. In the medium term we also need to make sure that the open-source components VersaTiles depends on are supported financially – for example through donations to the [OpenStreetMap Foundation](https://osmfoundation.org/), to [MapLibre](https://maplibre.org/sponsors/) and to [Mapterhorn](https://mapterhorn.com/).
+        The members decide together how the money is spent.
+  contactText: 'A question that is missing here?'
+  contactCta: 'Get in touch'
+footer: 'VersaTiles is an open-source project.'
+chart:
+  title: |-
+    The more people use a map, the more it costs.
+    Unless you are in the consortium.
+  axisX: 'Map views per month'
+  axisY: 'Cost per month'
+  note: 'Commercial providers bill per map view; the consortium charges a flat monthly fee (hosting, administration and development included). Above 1M views, Mapbox and MapTiler stop publishing prices – large customers negotiate and get discounts. The dashed lines extrapolate the list prices. Even at a 50% discount the bill would remain many times the membership fee.'
+  consortiumName: 'VersaTiles consortium'
+  listPriceLimit: 'End of the price list'

@@ -1,0 +1,18 @@
+.claude
+.DS_Store
+.env
+*.code-workspace
+*.mp4
+# Private outreach tracker – only the generated src/lib/campaign-status.ts is committed.
+# Keep the source private: at repo root, or in a private repo cloned into ./private/.
+/outreach.yaml
+/private/
+/.svelte-kit
+/build
+/coverage
+/dist
+/node_modules
+Thumbs.db
+
+# Intermediate clips from scripts/build-hero-loop.sh
+/.tmp/

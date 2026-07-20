@@ -1,0 +1,215 @@
+meta:
+  title: 'VersaTiles-Konsortium – Digitale Souveränität bei Karten'
+  description: 'Karten sind Infrastruktur. Wir suchen zehn Organisationen, die ihre Karteninfrastruktur mit uns gemeinsam betreiben – Europas erstes nutzergetragenes, offenes Kartenkonsortium. Für echte digitale Souveränität.'
+  ogImage:
+    line1: 'Open-Source-Software ist Infrastruktur.'
+    line2: 'Alle können sie nutzen.'
+    line3: 'Jemand muss sie finanzieren.'
+    sub: 'Zehn Organisationen. Ein Konsortium. Freie Karten für alle.'
+hero:
+  kicker: 'Open Source ist Infrastruktur. Jemand muss sie finanzieren.'
+  title1: |-
+    Digitale Souveränität,
+    die sich rechnet.
+  title2: |-
+    Ein Open-Source-Konsortium für~Karten.
+  lead: 'Derzeit beziehen viele Redaktionen, Behörden und Unternehmen ihre Webkarten von großen, teuren Anbietern außerhalb des EU-Rechtsraums. Unser Open-Source-Projekt „VersaTiles” beweist, dass es auch rechtssicher und hundert bis tausend Mal günstiger geht. Wir suchen zehn Organisationen, die mit uns das erste nutzergetragene Konsortium für digitale Infrastruktur in Europa gründen möchten.'
+  ctaPrimary: 'Zum Aufruf'
+  ctaSecondary: 'VersaTiles ansehen'
+banner:
+  heading: |-
+    Für das erste nutzergetragene Kartenkonsortium Europas
+    suchen wir 10 Mitgründer.
+  countLabel: 'Gründungsplätze sind besetzt'
+  sectorsHeading: 'Angesprochen sind Organisationen aus folgenden Bereichen:'
+  legend:
+    contacted: 'angefragt'
+    discussion: 'im Gespräch'
+    accepted: 'zugesagt'
+    declined: 'abgesagt'
+  sectorGroups:
+    public-broadcasters: 'öffentlich-rechtliche Medien'
+    private-media: 'private Medien'
+    companies: 'Unternehmen'
+    authorities: 'Behörden'
+letter:
+  heading: |-
+    Open-Source-Software ist~Infrastruktur.
+    Jemand muss sie finanzieren.
+  ctaPrimary: 'Mitgründer werden'
+  ctaSecondary: 'Kontakt aufnehmen'
+chart:
+  title: |-
+    Je mehr User eine Karte aufrufen, desto teurer wird sie.
+    Außer im VersaTiles-Konsortium.
+  axisX: 'Kartenaufrufe pro Monat'
+  axisY: 'Kosten pro Monat'
+  note: 'Während kommerzielle Anbieter pro Kartenaufruf abrechnen, erhebt das Konsortium einen festen Monatsbeitrag, in dem Hosting, Administration und Weiterentwicklung inklusive sind. Ab einer Million Aufrufen veröffentlichen Mapbox und MapTiler keine Preise mehr. Große Kunden verhandeln individuell und erhalten Rabatte. Die gestrichelten Linien zeigen die fortgeschriebenen Listenpreise.'
+  consortiumName: 'VersaTiles-Konsortium'
+  listPriceLimit: 'Ende der Preisliste'
+demos:
+  heading: 'So funktioniert VersaTiles'
+  linksHeading: 'Im Video gezeigt'
+  videos:
+    intro:
+      title: 'Einführung'
+      description: Was ist VersaTiles, wie ist es aufgebaut und wie spielen Daten, Server und Frontend zusammen?
+      links:
+        - label: 'VersaTiles-Website'
+          url: 'https://versatiles.org'
+        - label: 'Demo-Kartenserver'
+          url: 'https://tiles.versatiles.org'
+        - label: 'Satellitendarstellung'
+          url: 'https://tiles.versatiles.org/#map=13.17/46.8156/8.65601/156/60&style=satellite&config=eyJ0ZXJyYWluIjp0cnVlLCJoaWxsc2hhZGUiOnRydWV9'
+        - label: 'Showcases'
+          url: 'https://docs.versatiles.org/showcases/'
+        - label: 'Playground'
+          url: 'https://versatiles.org/playground/'
+        - label: 'Server-Setup-Tool'
+          url: 'https://versatiles.org/tools/setup_server'
+        - label: 'Dokumentation'
+          url: 'https://docs.versatiles.org/'
+        - label: 'Referenzmodell (Spezifikation)'
+          url: 'https://docs.versatiles.org/compendium/specification_reference_model.html'
+    server:
+      title: 'Der Server'
+      description: Welche Server-Implementierungen gibt es und wie setzt man einen eigenen Server auf?
+      links:
+        - label: VersaTiles Server
+          links:
+            - label: 'versatiles-rs (Rust)'
+              url: 'https://github.com/versatiles-org/versatiles-rs/'
+            - label: 'VersaTiles in Node.js'
+              url: 'https://github.com/versatiles-org/node-versatiles-server/'
+        - label: VersaTiles in der Google Cloud
+          links:
+            - label: 'Repository'
+              url: 'https://github.com/versatiles-org/node-versatiles-google-cloud'
+            - label: 'Anleitung'
+              url: 'https://docs.versatiles.org/guides/deploy_in_google_cloud.html'
+        - label: Weitere Links
+          links:
+            - label: 'Docker Container'
+              url: 'https://github.com/versatiles-org/versatiles-docker'
+            - label: 'Server-Setup-Tool'
+              url: 'https://versatiles.org/tools/setup_server'
+    data:
+      title: 'Die Kartendaten'
+      description: Wo kann man die Kartendaten herunterladen und wie werden Vektor- und Rasterdaten erzeugt?
+      links:
+        - label: 'Allgemeines'
+          links:
+            - label: 'Download-Server'
+              url: 'https://download.versatiles.org/'
+            - label: 'Container-Format'
+              url: 'https://docs.versatiles.org/compendium/specification_container.html'
+            - label: 'VersaTiles Pipeline'
+              url: 'https://github.com/versatiles-org/versatiles-rs/tree/main/versatiles_pipeline'
+        - label: 'Vektordaten'
+          links:
+            - label: 'Shortbread-Schema'
+              url: 'https://shortbread-tiles.org'
+            - label: 'Planetiler (Shortbread-Profil)'
+              url: 'https://github.com/versatiles-org/planetiler/tree/feature/shortbread-java-profile'
+            - label: 'Landcover-Vektoren'
+              url: 'https://github.com/versatiles-org/landcover-vectors'
+        - label: 'Rasterdaten'
+          links:
+            - label: 'Orthophotos'
+              url: 'https://github.com/versatiles-org/orthophotos'
+            - label: 'Mapterhorn (Höhendaten)'
+              url: 'https://mapterhorn.com/'
+    frontend:
+      title: 'Das Frontend'
+      description: Wie nutzt man Styles, Schriften, Bibliotheken und Werkzeuge für interaktive Karten?
+      links:
+        - label: 'Spezifikation'
+          links:
+            - label: 'TileJSON-Erweiterung'
+              url: 'https://docs.versatiles.org/compendium/specification_extended_tilejson.html'
+            - label: 'Frontend-Spezifikation'
+              url: 'https://docs.versatiles.org/compendium/specification_frontend.html'
+        - label: 'Bibliotheken'
+          links:
+            - label: 'Frontend-Repository'
+              url: 'https://github.com/versatiles-org/versatiles-frontend/'
+            - label: 'Schriften'
+              url: 'https://github.com/versatiles-org/versatiles-fonts'
+            - label: 'Glyphen-Rendering'
+              url: 'https://github.com/versatiles-org/versatiles-glyphs-rs'
+            - label: 'Style-Engine'
+              url: 'https://github.com/versatiles-org/versatiles-style'
+            - label: 'Svelte-Komponenten'
+              url: 'https://github.com/versatiles-org/node-versatiles-svelte/'
+        - label: 'Werkzeuge'
+          links:
+            - label: 'MapLibre Style-Editor'
+              url: 'https://github.com/versatiles-org/maplibre-versatiles-styler'
+            - label: 'SVG-Export'
+              url: 'https://github.com/versatiles-org/versatiles-svg-renderer'
+            - label: 'SVG-Export (Demo)'
+              url: 'https://versatiles.org/versatiles-svg-renderer/demo/index.html'
+            - label: 'Karten-Editor'
+              url: 'https://versatiles.org/node-versatiles-svelte/map-editor'
+            - label: 'Animation-Editor'
+              url: 'https://versatiles.org/versatiles-map-animation/'
+support:
+  heading: 'Jeder Beitrag hält VersaTiles unabhängig.'
+  text: 'Möchtest du VersaTiles direkt unterstützen? Jeder Beitrag hilft, die Weiterentwicklung zu sichern und VersaTiles unabhängig zu halten. Ob einmalig oder regelmäßig:'
+faq:
+  heading: 'Häufig gestellte Fragen'
+  items:
+    - q: 'Was kostet die Mitgliedschaft und wann wird der Betrag fällig?'
+      a: |-
+        700 € pro Monat, also 8.400 € pro Jahr (netto, zzgl. USt.), fällig als Jahresbeitrag. Der Beitrag wird erst fällig, wenn das Konsortium gegründet ist.
+
+    - q: 'Was passiert, wenn sich nicht zehn Organisationen zusammenfinden?'
+      a: |-
+        Dann wird nicht gegründet und es muss auch niemand etwas zahlen. Zehn Mitglieder sind die Schwelle, ab der das Budget den Betrieb und die Weiterentwicklung trägt. Darunter wäre das Versprechen nicht zu halten.
+        VersaTiles würde dadurch jedoch nicht verschwinden, da der Code und die Daten offen sind und es auch bleiben werden. Ohne Finanzierung würde das Projekt stillstehen und es gäbe keine Updates mehr für Software und Kartendaten.
+
+    - q: 'Woran binden wir uns, und wie kommen wir wieder raus?'
+      a: |-
+        Die Satzung beschließt die Gründungsversammlung, also wir gemeinsam. Mein Vorschlag für die Satzung: Die Mitgliedschaft ist zum Jahresende kündbar. Die Mitgliedsbeiträge werden einmal jährlich fällig.
+
+    - q: 'Was erhält man für den Mitgliedsbeitrag?'
+      a: |-
+        1. Karten-Hosting: Allen Mitgliedern steht eine betriebsfertige Karteninfrastruktur zur freien Nutzung zur Verfügung.
+        2. Mitentscheidungsrecht, in welche Richtung VersaTiles weiterentwickelt wird. Dazu gehört beispielsweise die Festlegung der Höhe von Mitgliedsbeiträgen, der Fokus auf Qualitätssicherung, IT-Sicherheit oder neue Features sowie die Festlegung von technischen Spezifikationen.
+        3. Beständigkeit: Die Weiterentwicklung von VersaTiles ist langfristig gesichert und liegt nicht in der Hand eines Anbieters, der sie einstellen, verkaufen oder verteuern kann.
+        4. Sichtbarkeit als Organisation, die digitale Souveränität nicht nur wünscht, sondern auch lebt.
+
+    - q: 'Wo stehen die Server, und ist das datenschutzkonform?'
+      a: |-
+        Welcher Anbieter es wird, entscheiden die Mitglieder.
+        Ebenso entscheiden sie, wie mit Zugriffsdaten umgegangen wird, ob und wie lange Logs aufbewahrt werden, und ob ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO angeboten werden soll. Diese Fragen gemeinsam zu beantworten, statt sie von einem Anbieter vorgesetzt zu bekommen, ist einer der Gründe für das Konsortium.
+        Unabhängig davon gilt: Weil VersaTiles Open Source ist, kann jede Organisation es auch im eigenen Haus betreiben – dann verlassen die Daten das eigene Rechenzentrum nie.
+
+    - q: 'Wir nutzen VersaTiles doch bereits kostenlos. Warum sollten wir also dafür zahlen?'
+      a: |-
+        Genau das ist die Frage, an der offene Infrastrukturen immer wieder scheitern. VersaTiles ist frei nutzbar und wird es auch bleiben. Aber Server, Kartendaten und Weiterentwicklung kosten Geld. Nur mit finanzieller Unterstützung kann das Projekt langfristig bestehen.
+        Anders ausgedrückt: Wer seinen Garten nicht gießt, darf sich nicht wundern, wenn alles eingeht.
+
+    - q: 'Wer entscheidet im Konsortium?'
+      a: |-
+        Das Konsortium ist ein eingetragener Verein. Jedes Mitglied hat eine Stimme – unabhängig von der Größe der Organisation. Ein öffentlich-rechtlicher Sender hat somit das gleiche Gewicht wie eine Behörde oder ein mittelständisches Unternehmen. Die Gründungsmitglieder erstellen die Satzung gemeinsam.
+
+    - q: 'Warum ein Verein und keine GmbH?'
+      a: |-
+        Weil eine GmbH Anteilseigner hat – und was Anteile hat, kann gekauft werden. Genau das ist das Problem, das wir lösen wollen. Eine Infrastruktur, auf die sich Redaktionen, Behörden und Unternehmen verlassen, darf nicht verkäuflich sein. Sie darf nicht übernommen und auf Rendite getrimmt werden. Ein Verein hat keine Eigentümer, sondern Mitglieder. Es gibt nichts zu verkaufen.
+        Hinzu kommt die Frage der Macht: In einer GmbH richten sich die Stimmen nach dem Kapital – wer am meisten zahlt, entscheidet am meisten. In einem Verein hat dagegen jedes Mitglied eine Stimme, unabhängig von seiner Größe. Überschüsse werden nicht ausgeschüttet, sondern fließen zurück in die Entwicklung und den Betrieb.
+        Auch aus praktischer Sicht ist der Verein der leichtere Weg: Eine Mitgliedschaft kann beschlossen und zum Jahresende gekündigt werden. Ein Gesellschaftsanteil müsste hingegen erworben, bewertet und irgendwann wieder veräußert werden – ein Vorgang, der eine Zusage durch eine Behörde eher verhindert als ermöglicht.
+        Sollte der Betrieb später eine operative Gesellschaft erfordern, kann der Verein eine solche Gesellschaft gründen und sie vor feindlichen Übernahmen schützen. Die Rechte an VersaTiles blieben in jedem Fall beim Verein.
+
+    - q: 'Inwieweit ist VersaTiles von einzelnen Personen abhängig?'
+      a: |-
+        VersaTiles wurde von Michael Kreil begonnen und wird bis heute im Kern von ihm entwickelt. Fiele er aus, stünde das Projekt still. Das ist das größte Risiko des Projekts und der Hauptgrund für die Gründung des Konsortiums.
+        Mittelfristig muss sichergestellt werden, dass mindestens drei Personen die Weiterentwicklung von VersaTiles überblicken und verantworten können. Dies ist eine der ersten Aufgaben, die das Konsortium gemeinsam angehen muss.
+
+    - q: 'Wofür werden die Mitgliedsbeiträge noch verwendet?'
+      a: |-
+        Die Beiträge fließen hauptsächlich in die Weiterentwicklung von VersaTiles und in den Betrieb der Infrastruktur. Mittelfristig muss jedoch auch sichergestellt werden, dass wichtige Open-Source-Komponenten ebenfalls finanziell unterstützt werden können, beispielsweise durch Spenden an die [OpenStreetMap Foundation](https://osmfoundation.org/), an [MapLibre](https://maplibre.org/sponsors/) und an [Mapterhorn](https://mapterhorn.com/).
+        Letztlich entscheiden die Mitglieder gemeinsam über die Verwendung der Mittel.
+  contactText: 'Eine Frage, die hier fehlt?'
+  contactCta: 'Schreib mir'
+footer: 'VersaTiles ist ein Open-Source-Projekt.'
