@@ -2,15 +2,9 @@
 	import { base } from '$app/paths';
 	import { ext } from '$lib/links.js';
 	import type { Locale } from '$lib/content.js';
+	import type { Copy } from '$lib/copy.js';
 
-	interface FooterCopy {
-		text: string;
-		fix: string;
-		repo: string;
-		letter: string;
-	}
-
-	let { t, lang }: { t: FooterCopy; lang: Locale } = $props();
+	let { t, lang }: { t: Copy['footer']; lang: Locale } = $props();
 
 	const repoUrl = 'https://github.com/versatiles-org/consortium';
 	const letterUrl = $derived(`${repoUrl}/blob/main/src/content/${lang}/letter.md`);
