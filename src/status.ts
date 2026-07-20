@@ -60,7 +60,21 @@ export const campaignStatus: CampaignStatus = {
 		},
 		{
 			id: 'companies',
-			members: [],
+			members: [
+				{ name: 'DB Fernverkehr AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'DB InfraGO AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Deutsche Telekom', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'DHL Group', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'DPD', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Flix', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Hermes', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'ImmoScout24', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'PLANET IC', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'publicplan', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Sixt', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Wire', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'init AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
+			],
 		},
 		{
 			id: 'authorities',
