@@ -78,7 +78,19 @@ export const campaignStatus: CampaignStatus = {
 		},
 		{
 			id: 'authorities',
-			members: [],
+			members: [
+				{ name: 'AKDB', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'BBK', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'Dataport', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'DVZ M-V', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'DWD', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'ekom21', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'ITDZ Berlin', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'kdvz Rhein-Erft-Rur', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'Komm.ONE', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'regio iT', history: [{ status: 'contacted', date: '2026-07-21' }] },
+				{ name: 'THW', history: [{ status: 'contacted', date: '2026-07-21' }] },
+			],
 		},
 	],
 };
