@@ -48,7 +48,7 @@ export const campaignStatus: CampaignStatus = {
 				{ name: 'Handelsblatt', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'Tagesspiegel', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'FAZ', history: [{ status: 'contacted', date: '2026-07-20' }] },
-				{ name: 'Ippen Digital ', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{ name: 'Ippen Digital', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'Münchner Merkur', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'DuMont Mediengruppe', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'Rheinische Post Mediengruppe', history: [{ status: 'contacted', date: '2026-07-20' }] },
