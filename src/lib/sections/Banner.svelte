@@ -53,20 +53,17 @@
 			<h3>{t.sectorsHeading}</h3>
 			<ul class="sectors-list">
 				{#each sectorStatus as row (row.id)}
-					<li class="sector">
-						<span class="sector__name">{t.sectorGroups[row.id]}</span>
-						<div class="boxes" role="group" aria-label={boxLabel(row)}>
-							{#each row.members as m (m.name)}<button
-									type="button"
-									class="box box--{m.status}"
-									aria-label="{m.name}: {t.legend[m.status]}"
-									onpointerenter={(e) => showTip(e, m)}
-									onpointerleave={hideTip}
-									onfocus={(e) => showTip(e, m)}
-									onblur={hideTip}
-								></button>{/each}
-							{#if row.members.length === 0}<span class="boxes__empty">–</span>{/if}
-						</div>
+					<li class="sector" aria-label={boxLabel(row)}>
+						<span class="sector__name">{t.sectorGroups[row.id]}:</span>
+						{#each row.members as m, i (m.name)}<button
+								type="button"
+								class="member"
+								aria-label="{m.name}: {t.legend[m.status]}"
+								onpointerenter={(e) => showTip(e, m)}
+								onpointerleave={hideTip}
+								onfocus={(e) => showTip(e, m)}
+								onblur={hideTip}
+							><span class="box box--{m.status}"></span>{m.name}{#if i < row.members.length - 1},{/if}</button>{#if i < row.members.length - 1}{' '}{/if}{/each}
 					</li>
 				{/each}
 			</ul>
@@ -174,45 +171,41 @@
 		list-style: none;
 		font-size: 0.95rem;
 	}
-	/* Desktop: two columns – name left, status right */
+	/* Each sector is one line of running text: "label: ☐ ARD, ☐ BR, …".
+	   The organisations wrap naturally like words in a paragraph. */
 	.sector {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 0.75rem;
 		padding: 0.55rem 0;
 		border-bottom: 1px solid var(--line);
+		line-height: 1.9;
 	}
 	.sector__name {
 		font-weight: 600;
 		color: var(--text-strong);
+		margin-right: 0.35rem;
+	}
+	/* box + organisation name are one hover/focus target; wraps happen at the comma.
+	   It is a <button> for keyboard focus, but must read as plain label text – so all
+	   the UA chrome (and the pointer cursor) is stripped. */
+	.member {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3rem;
+		white-space: nowrap;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		cursor: inherit;
 	}
 
-	/* One box per organisation, styled by outreach status.
-	   Fixed width = exactly 10 boxes per row (10 × 14px + 9 × 4px gap). Rows are
-	   right-aligned, so a partial last row still hugs the right edge. */
-	.boxes {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 4px;
-		width: 176px;
-		flex: none;
-	}
+	/* One box per organisation, styled by outreach status. */
 	.box {
 		box-sizing: border-box;
 		width: 14px;
 		height: 14px;
 		border-radius: 3px;
 		flex: none;
-		/* the sector boxes are <button>s – strip the UA styling */
-		padding: 0;
-		border: 0;
-		background: none;
-		font: inherit;
-	}
-	button.box {
-		cursor: help;
 	}
 
 	/* Tooltip: organisation name + chronological history */
@@ -316,19 +309,5 @@
 	.legend .box {
 		width: 12px;
 		height: 12px;
-	}
-
-	/* Mobile: stacked block – name on top, status below */
-	@media (max-width: 560px) {
-		.sector {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.4rem;
-		}
-		/* block sits left, so its rows should too */
-		.boxes {
-			justify-content: flex-start;
-			width: auto;
-		}
 	}
 </style>
