@@ -63,7 +63,8 @@
 								onpointerleave={hideTip}
 								onfocus={(e) => showTip(e, m)}
 								onblur={hideTip}
-							><span class="box box--{m.status}"></span>{m.name}{#if i < row.members.length - 1},{/if}</button>{#if i < row.members.length - 1}{' '}{/if}{/each}
+								><span class="box box--{m.status}"></span>{m.name}{#if i < row.members.length - 1},{/if}</button
+							>{#if i < row.members.length - 1}{' '}{/if}{/each}
 					</li>
 				{/each}
 			</ul>

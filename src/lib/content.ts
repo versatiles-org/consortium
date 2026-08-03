@@ -49,7 +49,7 @@ export const sectorStatus: SectorStatus[] = campaignStatus.sectors.map((sector) 
 			return { name: member.name, status: latest.status, history };
 		})
 		.filter((m): m is SectorMember => m !== null)
-		.sort((a, b) => (STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status)) || a.name.localeCompare(b.name));
+		.sort((a, b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status) || a.name.localeCompare(b.name));
 
 	const counts = { contacted: 0, discussion: 0, accepted: 0, declined: 0 };
 	for (const m of members) counts[m.status]++;
