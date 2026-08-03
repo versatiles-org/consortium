@@ -85,6 +85,9 @@
 					<li>
 						<span class="box-tip__date">{fmtDate(h.date)}</span>
 						<span class="box-tip__status">{t.legend[h.status]}</span>
+						{#if h.note}
+							<span class="box-tip__note">{h.note}</span>
+						{/if}
 					</li>
 				{/each}
 			</ul>
@@ -238,7 +241,8 @@
 	}
 	.box-tip__history li {
 		display: flex;
-		gap: 0.5rem;
+		flex-wrap: wrap;
+		gap: 0 0.5rem;
 	}
 	.box-tip__date {
 		flex: none;
@@ -247,6 +251,13 @@
 	}
 	.box-tip__status {
 		color: var(--text);
+	}
+	/* Note wraps onto its own line, indented under the status. */
+	.box-tip__note {
+		flex-basis: 100%;
+		margin-bottom: 0.15rem;
+		color: var(--text-muted);
+		font-size: 0.9em;
 	}
 	.box--contacted,
 	.box--discussion,

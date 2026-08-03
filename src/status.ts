@@ -9,7 +9,12 @@ interface CampaignStatus {
 		id: string;
 		members: {
 			name: string;
-			history?: { status: 'planned' | 'contacted' | 'discussion' | 'accepted' | 'declined'; date: string }[];
+			history?: {
+				status: 'planned' | 'contacted' | 'discussion' | 'accepted' | 'declined';
+				date: string;
+				/** Shown publicly in the banner tooltip — keep it neutral and self-authored. */
+				note?: string;
+			}[];
 		}[];
 	}[];
 }

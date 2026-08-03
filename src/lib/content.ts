@@ -15,6 +15,8 @@ export type OutreachStatus = (typeof STATUS_ORDER)[number];
 export interface OutreachEvent {
 	status: OutreachStatus;
 	date: string;
+	/** Optional public remark for this event. */
+	note?: string;
 }
 export interface SectorMember {
 	name: string;
