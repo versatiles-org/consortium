@@ -21,10 +21,6 @@ export default [
 		rules: {
 			// Single static page: hash anchors, mailto and external links only – no app routing.
 			'svelte/no-navigation-without-resolve': 'off',
-			// The sector list is running text that wraps between organisations, so it needs a
-			// literal space in the markup. {' '} is the only spelling prettier cannot reflow
-			// into a newline (Banner.svelte) – the rule would have us delete it.
-			'svelte/no-useless-mustaches': 'off',
 			'no-unused-vars': 'off',
 			'@typescript-eslint/no-unused-vars': [
 				'error',

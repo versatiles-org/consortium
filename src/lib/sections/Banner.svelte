@@ -69,16 +69,15 @@
 				{#each sectorStatus as row (row.id)}
 					<li class="sector" aria-label={boxLabel(row)}>
 						<span class="sector__name">{t.sectorGroups[row.id]}:</span>
-						{#each row.members as m, i (m.name)}<button
+						{#each row.members as m (m.name)}<button
 								type="button"
 								class="member"
 								aria-label="{m.name}: {t.legend[m.status]}"
 								onpointerenter={(e) => showTip(e, m)}
 								onpointerleave={hideTip}
 								onfocus={(e) => showTip(e, m)}
-								onblur={hideTip}
-								><span class="box box--{m.status}"></span>{m.name}{#if i < row.members.length - 1},{/if}</button
-							>{#if i < row.members.length - 1}{' '}{/if}{/each}
+								onblur={hideTip}><span class="box box--{m.status}"></span>{m.name}</button
+							>{/each}
 					</li>
 				{/each}
 			</ul>
@@ -231,13 +230,15 @@
 		color: var(--text-strong);
 		margin-right: 0.35rem;
 	}
-	/* box + organisation name are one hover/focus target; wraps happen at the comma.
+	/* box + organisation name are one hover/focus target, kept apart by a margin rather
+	   than punctuation – the line wraps between two of them.
 	   It is a <button> for keyboard focus, but must read as plain label text – so all
 	   the UA chrome (and the pointer cursor) is stripped. */
 	.member {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.3rem;
+		margin-inline-end: 0.9rem;
 		white-space: nowrap;
 		padding: 0;
 		border: 0;
