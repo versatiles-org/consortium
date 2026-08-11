@@ -15,6 +15,9 @@
 	// Visual counter: one slot per target seat, filled in join order.
 	const slots = Array.from({ length: MEMBER_TARGET }, (_, i) => foundingMembers[i] ?? null);
 	const filled = foundingMembers.length;
+	// The slots are one role="img", so the logos inside are invisible to screen readers – name them here.
+	const names = slots.map((m) => m?.name).filter((n) => n);
+	const counterLabel = `${filled} / ${MEMBER_TARGET}${names.length ? `: ${names.join(', ')}` : ''}`;
 
 	const boxLabel = (row: SectorStatus) => STATUS_ORDER.map((s) => `${row.counts[s]} ${t.legend[s]}`).join(', ');
 
@@ -36,10 +39,12 @@
 	<div class="container">
 		<h2><Lines text={t.heading} /></h2>
 
-		<div class="counter" role="img" aria-label={`${filled} / ${MEMBER_TARGET}`}>
+		<div class="counter" role="img" aria-label={counterLabel}>
 			{#each slots as member, i (i)}
-				<div class="slot" class:slot--filled={member}>
-					{#if member}
+				<div class="slot" class:slot--filled={member} class:slot--logo={member?.logo}>
+					{#if member?.logo}
+						<img class="slot__logo" src={member.logo} alt={member.name ?? ''} />
+					{:else if member}
 						<span class="slot__name">{member.name ?? '✓'}</span>
 					{:else}
 						<span class="slot__num">{i + 1}</span>
@@ -133,6 +138,7 @@
 	.slot {
 		aspect-ratio: 3 / 2;
 		min-width: 0;
+		overflow: hidden;
 		border: 2px dashed var(--line);
 		border-radius: var(--radius);
 		display: flex;
@@ -146,6 +152,15 @@
 		border: 0;
 		background: var(--accept);
 		color: var(--text-strong);
+	}
+	/* A logo brings its own background, so it fills the whole slot. */
+	.slot--logo {
+		padding: 0;
+	}
+	.slot__logo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 	.slot__num {
 		font-size: 1.1rem;

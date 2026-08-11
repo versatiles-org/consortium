@@ -1,4 +1,8 @@
 import { campaignStatus } from '../status.js';
+import idaLogo from '$lib/assets/logos/ida.svg';
+
+/** Member logos, keyed by the `logo` field in src/status.ts. */
+const memberLogos: Record<string, string> = { ida: idaLogo };
 
 export type Locale = 'de' | 'en';
 export const locales: Locale[] = ['de'];
@@ -8,6 +12,8 @@ export const siteUrl = 'https://versatiles.org/consortium';
 export interface FoundingMember {
 	name: string | null;
 	url?: string;
+	/** Resolved asset URL of the member's logo, if we have one. */
+	logo?: string;
 }
 export const STATUS_ORDER = ['contacted', 'discussion', 'accepted', 'declined'] as const;
 export type OutreachStatus = (typeof STATUS_ORDER)[number];
@@ -33,8 +39,10 @@ export interface SectorStatus {
 
 export const MEMBER_TARGET: number = campaignStatus.memberTarget;
 
-export const foundingMembers: FoundingMember[] = campaignStatus.foundingMembers.map((name) => ({
+export const foundingMembers: FoundingMember[] = campaignStatus.foundingMembers.map(({ name, url, logo }) => ({
 	name,
+	url,
+	logo: logo ? memberLogos[logo] : undefined,
 }));
 
 export const sectorStatus: SectorStatus[] = campaignStatus.sectors.map((sector) => {

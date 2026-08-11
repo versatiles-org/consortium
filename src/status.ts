@@ -4,7 +4,13 @@
 
 interface CampaignStatus {
 	memberTarget: number;
-	foundingMembers: string[];
+	/** In join order — one counter slot each. */
+	foundingMembers: {
+		name: string;
+		url?: string;
+		/** Key in the logo map in src/lib/content.ts; without one the slot shows the name. */
+		logo?: string;
+	}[];
 	sectors: {
 		id: string;
 		members: {
@@ -21,7 +27,7 @@ interface CampaignStatus {
 
 export const campaignStatus: CampaignStatus = {
 	memberTarget: 10,
-	foundingMembers: [],
+	foundingMembers: [{ name: 'ida', url: 'https://www.ida.me', logo: 'ida' }],
 	sectors: [
 		{
 			id: 'public-broadcasters',
@@ -84,6 +90,8 @@ export const campaignStatus: CampaignStatus = {
 				{ name: 'publicplan', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'Sixt', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'Wire', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				// Approached us on its own — no outreach letter, hence a single 'accepted' entry.
+				{ name: 'ida', history: [{ status: 'accepted', date: '2026-08-11' }] },
 				{ name: 'init AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
 			],
 		},
