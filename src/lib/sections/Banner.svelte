@@ -5,9 +5,11 @@
 		foundingMembers,
 		sectorStatus,
 		STATUS_ORDER,
+		type FoundingMember,
 		type SectorStatus,
 		type SectorMember,
 	} from '$lib/content.js';
+	import { ext } from '$lib/links.js';
 	import type { Copy } from '$lib/copy.js';
 
 	let { t, lang }: { t: Copy['banner']; lang: string } = $props();
@@ -15,9 +17,6 @@
 	// Visual counter: one slot per target seat, filled in join order.
 	const slots = Array.from({ length: MEMBER_TARGET }, (_, i) => foundingMembers[i] ?? null);
 	const filled = foundingMembers.length;
-	// The slots are one role="img", so the logos inside are invisible to screen readers – name them here.
-	const names = slots.map((m) => m?.name).filter((n) => n);
-	const counterLabel = `${filled} / ${MEMBER_TARGET}${names.length ? `: ${names.join(', ')}` : ''}`;
 
 	const boxLabel = (row: SectorStatus) => STATUS_ORDER.map((s) => `${row.counts[s]} ${t.legend[s]}`).join(', ');
 
@@ -39,17 +38,27 @@
 	<div class="container">
 		<h2><Lines text={t.heading} /></h2>
 
-		<div class="counter" role="img" aria-label={counterLabel}>
+		<!-- A taken seat shows the member's logo and links to it; the logo's alt text names the
+		     link. The empty seats are decoration – the count below says the same in words. -->
+		{#snippet seat(member: FoundingMember)}
+			{#if member.logo}
+				<img class="slot__logo" src={member.logo} alt={member.name ?? ''} />
+			{:else}
+				<span class="slot__name">{member.name ?? '✓'}</span>
+			{/if}
+		{/snippet}
+
+		<div class="counter">
 			{#each slots as member, i (i)}
-				<div class="slot" class:slot--filled={member} class:slot--logo={member?.logo}>
-					{#if member?.logo}
-						<img class="slot__logo" src={member.logo} alt={member.name ?? ''} />
-					{:else if member}
-						<span class="slot__name">{member.name ?? '✓'}</span>
-					{:else}
-						<span class="slot__num">{i + 1}</span>
-					{/if}
-				</div>
+				{#if member?.url}
+					<a class="slot slot--filled" class:slot--logo={member.logo} href={member.url} {...ext(member.url)}
+						>{@render seat(member)}</a
+					>
+				{:else if member}
+					<div class="slot slot--filled" class:slot--logo={member.logo}>{@render seat(member)}</div>
+				{:else}
+					<div class="slot" aria-hidden="true"><span class="slot__num">{i + 1}</span></div>
+				{/if}
 			{/each}
 		</div>
 		<p class="counter__count"><strong>{filled} / {MEMBER_TARGET}</strong> {t.countLabel}</p>
@@ -156,6 +165,26 @@
 	/* A logo brings its own background, so it fills the whole slot. */
 	.slot--logo {
 		padding: 0;
+	}
+	/* A seat that links to its member: no underline (the logo is the label), and the same
+	   lift on hover as .btn. */
+	a.slot {
+		text-decoration: none;
+		transition:
+			transform 0.08s ease,
+			box-shadow 0.15s ease;
+	}
+	a.slot:hover {
+		transform: translateY(-1px);
+		box-shadow: 0 4px 14px rgb(0 0 0 / 45%);
+	}
+	@media (prefers-reduced-motion: reduce) {
+		a.slot {
+			transition: none;
+		}
+		a.slot:hover {
+			transform: none;
+		}
 	}
 	.slot__logo {
 		width: 100%;
