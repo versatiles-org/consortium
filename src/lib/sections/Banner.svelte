@@ -248,9 +248,11 @@
 		cursor: inherit;
 	}
 
-	/* One box per organisation, styled by outreach status. */
+	/* One box per organisation, styled by outreach status.
+	   position: relative for the out-of-flow ✓/✗ glyph – see .box--*::after. */
 	.box {
 		box-sizing: border-box;
+		position: relative;
 		width: 14px;
 		height: 14px;
 		border-radius: 3px;
@@ -304,21 +306,21 @@
 		color: var(--text-muted);
 		font-size: 0.9em;
 	}
-	.box--contacted,
-	.box--discussion,
-	.box--accepted,
-	.box--declined {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-	}
 	/* in talks – filled, but no outcome glyph yet */
 	.box--discussion {
 		background: var(--discuss);
 	}
+	/* The glyph is taken out of flow and centred in the box. In flow it would give the box a
+	   text baseline, and .member (inline-flex) takes its own baseline from the box – which
+	   dropped the accepted/declined entries 3px below the rest of their line. */
 	.box--contacted::after,
 	.box--accepted::after,
 	.box--declined::after {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		font-size: 10px;
 		font-weight: 700;
 		line-height: 1;
