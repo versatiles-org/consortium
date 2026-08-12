@@ -47,7 +47,13 @@ export const campaignStatus: CampaignStatus = {
 				{ name: 'SR', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'SWR', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'WDR', history: [{ status: 'contacted', date: '2026-07-20' }] },
-				{ name: 'ZDF', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{
+					name: 'ZDF',
+					history: [
+						{ status: 'contacted', date: '2026-07-20' },
+						{ status: 'declined', date: '2026-08-12' },
+					],
+				},
 				{ name: 'ORF', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'SRF', history: [{ status: 'contacted', date: '2026-07-20' }] },
 			],
