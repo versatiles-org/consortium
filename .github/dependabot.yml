@@ -9,6 +9,9 @@ updates:
     groups:
       github-actions:
         patterns: ['*']
+      security:
+        applies-to: security-updates
+        patterns: ['*']
 
   - package-ecosystem: npm
     directory: /
@@ -18,4 +21,7 @@ updates:
       prefix: chore
     groups:
       npm:
+        patterns: ['*']
+      security:
+        applies-to: security-updates
         patterns: ['*']
