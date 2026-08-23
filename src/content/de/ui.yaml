@@ -110,7 +110,7 @@ demos:
             - label: 'Shortbread-Schema'
               url: 'https://shortbread-tiles.org'
             - label: 'Planetiler (Shortbread-Profil)'
-              url: 'https://github.com/versatiles-org/planetiler/tree/feature/shortbread-java-profile'
+              url: 'https://github.com/versatiles-org/planetiler-shortbread'
             - label: 'Landcover-Vektoren'
               url: 'https://github.com/versatiles-org/landcover-vectors'
         - label: 'Rasterdaten'

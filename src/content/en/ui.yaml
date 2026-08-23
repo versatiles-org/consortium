@@ -78,7 +78,7 @@ demos:
             - { label: 'Shortbread schema', url: 'https://shortbread-tiles.org' }
             - {
                 label: 'Planetiler (Shortbread profile)',
-                url: 'https://github.com/versatiles-org/planetiler/tree/feature/shortbread-java-profile',
+                url: 'https://github.com/versatiles-org/planetiler-shortbread',
               }
             - { label: 'Landcover vectors', url: 'https://github.com/versatiles-org/landcover-vectors' }
         - { label: 'Orthophotos', url: 'https://github.com/versatiles-org/orthophotos' }
