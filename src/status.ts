@@ -85,7 +85,13 @@ export const campaignStatus: CampaignStatus = {
 			id: 'companies',
 			members: [
 				{ name: 'DB Fernverkehr AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
-				{ name: 'DB InfraGO AG', history: [{ status: 'contacted', date: '2026-07-20' }] },
+				{
+					name: 'DB InfraGO AG',
+					history: [
+						{ status: 'contacted', date: '2026-07-20' },
+						{ status: 'declined', date: '2026-09-03' },
+					],
+				},
 				{ name: 'Deutsche Telekom', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'DHL Group', history: [{ status: 'contacted', date: '2026-07-20' }] },
 				{ name: 'DPD', history: [{ status: 'contacted', date: '2026-07-20' }] },
