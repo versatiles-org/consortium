@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { heroVisual } from '$lib/content.js';
+	import { asset } from '$app/paths';
+	import type { AssetPath } from '$app/types';
+	import { heroVisual } from '#lib/content.js';
 
 	let heroVideoEl: HTMLVideoElement | undefined = $state();
 	// The loop autoplays natively (autoplay + muted + playsinline), so it also runs
@@ -24,17 +25,17 @@
 						muted
 						loop
 						playsinline
-						poster={heroVisual.poster ? `${base}/${heroVisual.poster}` : undefined}
+						poster={heroVisual.poster ? asset(heroVisual.poster) : undefined}
 					>
 						<source
-							src={heroVisual.src.startsWith('http') ? heroVisual.src : `${base}/${heroVisual.src}`}
+							src={heroVisual.src.startsWith('http') ? heroVisual.src : asset(heroVisual.src as AssetPath)}
 							type="video/mp4"
 						/>
 					</video>
 				{:else}
-					<img src="{base}/{heroVisual.poster}" alt="VersaTiles: Karten von Straße über Satellit bis 3D" />
+					<img src={asset(heroVisual.poster)} alt="VersaTiles: Karten von Straße über Satellit bis 3D" />
 				{/if}
-				<img class="hero-visual__logo" src="{base}/versatiles.svg" alt="" aria-hidden="true" />
+				<img class="hero-visual__logo" src={asset('versatiles.svg')} alt="" aria-hidden="true" />
 			</figure>
 		</div>
 	</section>

@@ -1,4 +1,4 @@
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
 
 // Set <html lang> per page (runs during prerender for the static build).
 export const handle: Handle = ({ event, resolve }) => {

@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { locales, type Locale } from '$lib/content.js';
-import { copy } from '$lib/copy.js';
+import { locales, type Locale } from '#lib/content.js';
+import { copy } from '#lib/copy.js';
 
 export const prerender = true;
 

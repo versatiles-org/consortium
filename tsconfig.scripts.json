@@ -1,6 +1,6 @@
 {
-	// The app's tsconfig extends SvelteKit's generated one, whose `include` covers src/ only —
-	// scripts/ would silently go unchecked. This is that check.
+	// The app's tsconfig only includes src/ and the Vite config, so scripts/ would silently go
+	// unchecked. This is that check.
 	//
 	// erasableSyntaxOnly bans the TypeScript that Node cannot strip (enums, namespaces,
 	// parameter properties), so `node scripts/og-shot.ts` can never fail at runtime over

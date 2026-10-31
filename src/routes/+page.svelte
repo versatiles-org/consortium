@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import { goto } from '$app/navigation';
-	import { locales } from '$lib/content.js';
+	import { locales } from '#lib/content.js';
 
 	// Static site: pick the language client-side from the browser, then redirect.
 	// Prefer German; otherwise the first available locale (English is currently off).
@@ -11,7 +11,7 @@
 		const prefersDe = langs.some((l) => l?.toLowerCase().startsWith('de'));
 		const pick = prefersDe ? 'de' : 'en';
 		const target = (locales as string[]).includes(pick) ? pick : locales[0];
-		goto(`${base}/${target}`, { replaceState: true });
+		goto(resolve('/[lang]', { lang: target }), { replace: true });
 	});
 </script>
 
@@ -24,7 +24,7 @@
 	<p>Weiterleitung … / Redirecting …</p>
 	<noscript>
 		<p>
-			{#each locales as l (l)}<a href="{base}/{l}">{l}</a>
+			{#each locales as l (l)}<a href={resolve('/[lang]', { lang: l })}>{l}</a>
 			{/each}
 		</p>
 	</noscript>

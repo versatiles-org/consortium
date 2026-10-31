@@ -8,9 +8,9 @@
   To preview while editing: `npm run dev` → http://localhost:5173/og/de
 -->
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { siteUrl } from '$lib/content.js';
-	import bg from '$lib/assets/og-bg.jpg';
+	import { asset } from '$app/paths';
+	import { siteUrl } from '#lib/content.js';
+	import bg from '#lib/assets/og-bg.jpg';
 
 	let { data } = $props();
 	const og = $derived(data.og);
@@ -27,8 +27,8 @@
 	<div class="bg"></div>
 	<div class="scrim"></div>
 
-	<!-- base, not siteUrl: this is screenshotted from the local build, which is not deployed yet. -->
-	<img class="logo" src="{base}/versatiles.svg" alt="" />
+	<!-- asset(), not siteUrl: this is screenshotted from the local build, which is not deployed yet. -->
+	<img class="logo" src={asset('versatiles.svg')} alt="" />
 
 	<div class="main">
 		<h1>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Lines from '$lib/Lines.svelte';
-	import { MEMBER_TARGET, foundingMembers, type FoundingMember } from '$lib/content.js';
-	import { ext } from '$lib/links.js';
-	import type { Copy } from '$lib/copy.js';
+	import Lines from '#lib/Lines.svelte';
+	import { MEMBER_TARGET, foundingMembers, type FoundingMember } from '#lib/content.js';
+	import { ext } from '#lib/links.js';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t }: { t: Copy['banner'] } = $props();
 

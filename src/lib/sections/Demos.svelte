@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { demoVideos } from '$lib/content.js';
-	import { ext } from '$lib/links.js';
-	import type { Copy } from '$lib/copy.js';
+	import { asset } from '$app/paths';
+	import { demoVideos } from '#lib/content.js';
+	import { ext } from '#lib/links.js';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t }: { t: Copy['demos'] } = $props();
 </script>
@@ -22,7 +22,7 @@
 						</header>
 
 						<div class="video__player">
-							<video controls preload="none" poster="{base}/{video.poster}">
+							<video controls preload="none" poster={asset(video.poster)}>
 								<source src={video.url} type="video/mp4" />
 								<a href={video.url} {...ext(video.url)}>Download</a>
 							</video>

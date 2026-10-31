@@ -2,8 +2,8 @@
 	// Renders a copy string with the small markup from rich.ts (paragraphs, numbered
 	// lists, links) as real elements — no {@html}, so escaping and scoped CSS both work.
 	// The caller styles the output from its own <style> block.
-	import { parseRich } from '$lib/rich.js';
-	import { ext } from '$lib/links.js';
+	import { parseRich } from '#lib/rich.js';
+	import { ext } from '#lib/links.js';
 
 	let { text }: { text: string } = $props();
 

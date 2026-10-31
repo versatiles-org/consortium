@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { siteUrl, locales } from '$lib/content.js';
-	import Hero from '$lib/sections/Hero.svelte';
-	import HeroVisual from '$lib/sections/HeroVisual.svelte';
-	import Banner from '$lib/sections/Banner.svelte';
-	import Letter from '$lib/sections/Letter.svelte';
-	import Demos from '$lib/sections/Demos.svelte';
-	import Support from '$lib/sections/Support.svelte';
-	import Faq from '$lib/sections/Faq.svelte';
-	import SiteFooter from '$lib/sections/SiteFooter.svelte';
+	import { siteUrl, locales } from '#lib/content.js';
+	import Hero from '#lib/sections/Hero.svelte';
+	import HeroVisual from '#lib/sections/HeroVisual.svelte';
+	import Banner from '#lib/sections/Banner.svelte';
+	import Letter from '#lib/sections/Letter.svelte';
+	import Demos from '#lib/sections/Demos.svelte';
+	import Support from '#lib/sections/Support.svelte';
+	import Faq from '#lib/sections/Faq.svelte';
+	import SiteFooter from '#lib/sections/SiteFooter.svelte';
 
 	let { data } = $props();
 	const t = $derived(data.t);
@@ -17,7 +17,7 @@
 <svelte:head>
 	<title>{t.meta.title}</title>
 	<meta name="description" content={t.meta.description} />
-	<!-- hreflang must be fully-qualified (relative URLs are ignored), so these use siteUrl, not base. -->
+	<!-- hreflang must be fully-qualified (relative URLs are ignored), so these use siteUrl, not resolve(). -->
 	{#each locales as l (l)}
 		<link rel="alternate" hreflang={l} href="{siteUrl}/{l}" />
 	{/each}

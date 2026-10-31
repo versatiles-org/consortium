@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Lines from '$lib/Lines.svelte';
-	import { costSeries, MAX_USERS, LIST_PRICE_LIMIT } from '$lib/costModel.js';
-	import type { Copy } from '$lib/copy.js';
+	import Lines from '#lib/Lines.svelte';
+	import { costSeries, MAX_USERS, LIST_PRICE_LIMIT } from '#lib/costModel.js';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t, lang }: { t: Copy['chart']; lang: string } = $props();
 

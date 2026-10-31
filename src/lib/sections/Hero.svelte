@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Lines from '$lib/Lines.svelte';
-	import type { Copy } from '$lib/copy.js';
+	import Lines from '#lib/Lines.svelte';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t }: { t: Copy['hero'] } = $props();
 </script>

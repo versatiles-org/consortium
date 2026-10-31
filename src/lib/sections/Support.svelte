@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { donate } from '$lib/content.js';
-	import { ext } from '$lib/links.js';
-	import type { Copy } from '$lib/copy.js';
+	import { donate } from '#lib/content.js';
+	import { ext } from '#lib/links.js';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t }: { t: Copy['support'] } = $props();
 </script>

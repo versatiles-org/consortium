@@ -5,6 +5,9 @@
 	"license": "MIT",
 	"type": "module",
 	"private": true,
+	"imports": {
+		"#lib/*": "./src/lib/*"
+	},
 	"scripts": {
 		"check": "npm run check:ts && npm run check:lint && npm run check:svelte && npm run format",
 		"check:ts": "tsc --noEmit && tsc --noEmit -p tsconfig.scripts.json",

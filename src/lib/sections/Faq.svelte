@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Rich from '$lib/Rich.svelte';
-	import type { Copy } from '$lib/copy.js';
+	import Rich from '#lib/Rich.svelte';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t }: { t: Copy['faq'] } = $props();
 </script>

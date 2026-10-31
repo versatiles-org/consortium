@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { ext } from '$lib/links.js';
-	import type { Locale } from '$lib/content.js';
-	import type { Copy } from '$lib/copy.js';
+	import { asset } from '$app/paths';
+	import { ext } from '#lib/links.js';
+	import type { Locale } from '#lib/content.js';
+	import type { Copy } from '#lib/copy.js';
 
 	let { t, lang }: { t: Copy['footer']; lang: Locale } = $props();
 
@@ -12,7 +12,7 @@
 
 <footer class="site-footer">
 	<div class="container">
-		<a href="https://versatiles.org" aria-label="VersaTiles"><img src="{base}/versatiles.svg" alt="VersaTiles" /></a>
+		<a href="https://versatiles.org" aria-label="VersaTiles"><img src={asset('versatiles.svg')} alt="VersaTiles" /></a>
 		<p>{t.text} · <a href="https://versatiles.org">versatiles.org</a></p>
 		<p class="source">
 			{t.fix}

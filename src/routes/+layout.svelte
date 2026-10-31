@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { locales } from '$lib/content.js';
-	import interFont from '$lib/fonts/inter-latin.woff2?url';
+	import { locales } from '#lib/content.js';
+	import interFont from '#lib/fonts/inter-latin.woff2?url';
 	import '../styles/global.scss';
 
 	let { children } = $props();
@@ -48,13 +48,13 @@
 	<header class="site-nav">
 		<nav>
 			<a class="site-nav__logo" href="https://versatiles.org" aria-label="VersaTiles">
-				<img src="{base}/versatiles.svg" alt="VersaTiles" />
+				<img src={asset('versatiles.svg')} alt="VersaTiles" />
 			</a>
 			{#if lang && locales.length > 1}
 				<div class="lang">
-					<a href="{base}/de{hash}" class:active={lang === 'de'}>Deutsch</a>
+					<a href="{resolve('/[lang]', { lang: 'de' })}{hash}" class:active={lang === 'de'}>Deutsch</a>
 					<span class="lang__sep">/</span>
-					<a href="{base}/en{hash}" class:active={lang === 'en'}>English</a>
+					<a href="{resolve('/[lang]', { lang: 'en' })}{hash}" class:active={lang === 'en'}>English</a>
 				</div>
 			{/if}
 		</nav>

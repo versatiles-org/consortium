@@ -1,5 +1,6 @@
 import { campaignStatus } from '../status.js';
-import idaLogo from '$lib/assets/logos/ida.svg';
+import idaLogo from '#lib/assets/logos/ida.svg';
+import type { AssetPath } from '$app/types';
 
 /** Member logos, keyed by the `logo` field in src/status.ts. */
 const memberLogos: Record<string, string> = { ida: idaLogo };
@@ -27,7 +28,7 @@ export const foundingMembers: FoundingMember[] = campaignStatus.foundingMembers.
 export interface DemoVideo {
 	id: string;
 	url: string;
-	poster: string;
+	poster: AssetPath;
 }
 export const demoVideos: DemoVideo[] = [
 	{ id: 'intro', url: 'https://cdn.versatiles.cloud/video/demo.intro.de.mp4', poster: 'poster-intro.jpg' },
@@ -45,7 +46,7 @@ export const donate = {
 	openCollective: 'https://opencollective.com/versatiles',
 };
 
-export const heroVisual = {
+export const heroVisual: { src: string; poster: AssetPath } = {
 	src: 'https://cdn.versatiles.cloud/video/hero-loop.mp4', // built by scripts/build-hero-loop.sh, hosted on the CDN
 	poster: 'poster-hero.jpg',
 };

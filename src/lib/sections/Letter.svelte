@@ -1,7 +1,7 @@
 <script lang="ts">
-	import CostChart from '$lib/CostChart.svelte';
-	import Lines from '$lib/Lines.svelte';
-	import type { Copy } from '$lib/copy.js';
+	import CostChart from '#lib/CostChart.svelte';
+	import Lines from '#lib/Lines.svelte';
+	import type { Copy } from '#lib/copy.js';
 
 	let { letter, chart, lang }: { letter: Copy['letter']; chart: Copy['chart']; lang: string } = $props();
 
