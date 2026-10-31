@@ -1,11 +1,11 @@
 meta:
   title: 'VersaTiles-Konsortium – Digitale Souveränität bei Karten'
-  description: 'Karten sind Infrastruktur. Wir suchen zehn Organisationen, die ihre Karteninfrastruktur mit uns gemeinsam betreiben – Europas erstes nutzergetragenes, offenes Kartenkonsortium. Für echte digitale Souveränität.'
+  description: 'Karten sind Infrastruktur. Die Gründung von Europas erstem nutzergetragenen, offenen Kartenkonsortium ist pausiert, bis sich zehn Organisationen gefunden haben, die ihre Karteninfrastruktur mit uns gemeinsam betreiben möchten.'
   ogImage:
     line1: 'Open-Source-Software ist Infrastruktur.'
     line2: 'Alle können sie nutzen.'
     line3: 'Jemand muss sie finanzieren.'
-    sub: 'Zehn Organisationen. Ein Konsortium. Freie Karten für alle.'
+    sub: 'Pausiert, bis sich zehn Organisationen gefunden haben.'
 hero:
   kicker: 'Open Source ist Infrastruktur. Jemand muss sie finanzieren.'
   title1: |-
@@ -13,25 +13,15 @@ hero:
     die sich rechnet.
   title2: |-
     Ein Open-Source-Konsortium für~Karten.
-  lead: 'Derzeit beziehen viele Redaktionen, Behörden und Unternehmen ihre Webkarten von großen, teuren Anbietern außerhalb des EU-Rechtsraums. Unser Open-Source-Projekt „VersaTiles” beweist, dass es auch rechtssicher und hundertmal wirtschaftlicher geht. Wir suchen zehn Organisationen, die mit uns das erste nutzergetragene Konsortium für digitale Infrastruktur in Europa gründen möchten.'
+  lead: 'Derzeit beziehen viele Redaktionen, Behörden und Unternehmen ihre Webkarten von großen, teuren Anbietern außerhalb des EU-Rechtsraums. Unser Open-Source-Projekt „VersaTiles” beweist, dass es auch rechtssicher und hundertmal wirtschaftlicher geht. Wir suchen weiterhin zehn Organisationen, die mit uns das erste nutzergetragene Konsortium für digitale Infrastruktur in Europa gründen möchten.'
+  status: 'Unser Ziel, bis zum 1. September zehn Organisationen zu finden, haben wir nicht erreicht. Die Gründung ist deshalb pausiert und findet statt, sobald zehn Organisationen zugesagt haben. Zusagen sind weiterhin möglich.'
   ctaPrimary: 'Zum Aufruf'
   ctaSecondary: 'VersaTiles ansehen'
 banner:
   heading: |-
     Für das erste nutzergetragene Kartenkonsortium Europas
-    suchen wir 10 Mitgründer.
+    suchen wir weiterhin 10 Mitgründer.
   countLabel: 'Gründungsplätze sind besetzt'
-  sectorsHeading: 'Angesprochen sind Organisationen aus folgenden Bereichen:'
-  legend:
-    contacted: 'angefragt'
-    discussion: 'im Gespräch'
-    accepted: 'zugesagt'
-    declined: 'abgesagt'
-  sectorGroups:
-    public-broadcasters: 'öffentlich-rechtliche Medien'
-    private-media: 'private Medien'
-    companies: 'Unternehmen'
-    authorities: 'Behörden'
 letter:
   heading: |-
     Open-Source-Software ist~Infrastruktur.
@@ -163,10 +153,10 @@ faq:
       a: |-
         700 € pro Monat, also 8.400 € pro Jahr (netto, zzgl. USt.), fällig als Jahresbeitrag. Der Beitrag wird erst fällig, wenn das Konsortium gegründet ist.
 
-    - q: 'Was passiert, wenn sich nicht zehn Organisationen zusammenfinden?'
+    - q: 'Was passiert, solange sich keine zehn Organisationen zusammenfinden?'
       a: |-
-        Dann wird nicht gegründet und es muss auch niemand etwas zahlen. Zehn Mitglieder sind die Schwelle, ab der das Budget den Betrieb und die Weiterentwicklung trägt. Darunter wäre das Versprechen nicht zu halten.
-        VersaTiles würde dadurch jedoch nicht verschwinden, da der Code und die Daten offen sind und es auch bleiben werden. Ohne Finanzierung würde das Projekt stillstehen und es gäbe keine Updates mehr für Software und Kartendaten.
+        Das ist der aktuelle Stand: Die Gründung ist pausiert und niemand muss etwas zahlen. Zehn Mitglieder sind die Schwelle, ab der das Budget den Betrieb und die Weiterentwicklung trägt. Darunter wäre das Versprechen nicht zu halten.
+        VersaTiles verschwindet dadurch jedoch nicht, da der Code und die Daten offen sind und es auch bleiben werden. Ohne Finanzierung würde das Projekt aber stillstehen und es gäbe keine Updates mehr für Software und Kartendaten.
 
     - q: 'Woran binden wir uns, und wie kommen wir wieder raus?'
       a: |-

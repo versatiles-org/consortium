@@ -22,7 +22,7 @@ VersaTiles ist mehr als nur ein kostenloses Werkzeug: Es ist eine **digitale, ö
 
 Wer mitgründet, ist weder Kunde noch Sponsor, sondern **Mitentscheider und Anteilseigner**. Über ein Konsortium lassen sich die Unabhängigkeit, Rechtssicherheit und Mitbestimmung über die eigene digitale Infrastruktur gewährleisten.
 
-Bis **zum 1. September** suchen wir die ersten zehn Mitglieder. Mit der Gründung des Konsortiums am 15. September wird der Beitrag dann verbindlich. Wenn Ihre Organisation Karten nutzt oder nutzen möchte, ohne sich abhängig zu machen, dann lassen Sie uns reden.
+Wir suchen die ersten zehn Mitglieder. Einen festen Termin gibt es nicht: Die Gründung ist pausiert, bis wir sie gefunden haben. Erst mit der Gründung des Konsortiums wird der Beitrag verbindlich. Wenn Ihre Organisation Karten nutzt oder nutzen möchte, ohne sich abhängig zu machen, dann lassen Sie uns reden.
 
 **Michael Kreil**  
 Datenjournalist, Entwickler und Gründer von VersaTiles
