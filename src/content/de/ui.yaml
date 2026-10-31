@@ -62,7 +62,7 @@ demos:
         - label: 'Satellitendarstellung'
           url: 'https://tiles.versatiles.org/#map=13.17/46.8156/8.65601/156/60&style=satellite&config=eyJ0ZXJyYWluIjp0cnVlLCJoaWxsc2hhZGUiOnRydWV9'
         - label: 'Showcases'
-          url: 'https://docs.versatiles.org/showcases/'
+          url: 'https://versatiles.org/showcases/'
         - label: 'Playground'
           url: 'https://versatiles.org/playground/'
         - label: 'Server-Setup-Tool'

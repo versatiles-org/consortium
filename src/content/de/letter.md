@@ -2,7 +2,7 @@ Ob Redaktionen, Unternehmen, Behörden oder der Katastrophenschutz – viele ver
 
 > Es geht auch anders.
 
-[VersaTiles](https://versatiles.org) ist eine offene Karteninfrastruktur. Sie entstand 2023 im SWR Data Lab, wurde dann hauptsächlich von der [Medienanstalt Berlin-Brandenburg](https://www.miz-babelsberg.de/foerderung/allgemeines.html) sowie [NGI0 der Europäischen Kommission](https://nlnet.nl/NGI0/) finanziert und wird inzwischen von einer wachsenden Community weiterentwickelt. Medien wie der NDR und der SWR sowie einige Unternehmen betreiben VersaTiles sogar in ihrer eigenen Infrastruktur. Die breiten Einsatzmöglichkeiten zeigen sich in [etwa 70 Projekten aus 19 Ländern](https://docs.versatiles.org/showcases/).
+[VersaTiles](https://versatiles.org) ist eine offene Karteninfrastruktur. Sie entstand 2023 im SWR Data Lab, wurde dann hauptsächlich von der [Medienanstalt Berlin-Brandenburg](https://www.miz-babelsberg.de/foerderung/allgemeines.html) sowie [NGI0 der Europäischen Kommission](https://nlnet.nl/NGI0/) finanziert und wird inzwischen von einer wachsenden Community weiterentwickelt. Medien wie der NDR und der SWR sowie einige Unternehmen betreiben VersaTiles sogar in ihrer eigenen Infrastruktur. Die breiten Einsatzmöglichkeiten zeigen sich in [etwa 70 Projekten aus 19 Ländern](https://versatiles.org/showcases/).
 
 Der wirtschaftliche Unterschied ist drastisch: Eine interaktive Karte auf der Startseite eines Nachrichtenportals mit großer Reichweite kann bei kommerziellen Anbietern **50.000 Euro und mehr pro Monat** kosten – selbst mit ausgehandeltem Mengenrabatt. Mit VersaTiles lägen die Hostingkosten dagegen **weit unter 100 Euro**.
 

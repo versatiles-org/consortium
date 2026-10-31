@@ -2,7 +2,7 @@ News sites, companies, public agencies, emergency alert services – countless s
 
 > There is another way.
 
-VersaTiles is an open map infrastructure – free, open-source and self-hostable. Broadcasters like **NDR and SWR** already host VersaTiles on their own infrastructure; more than [60 showcases across 17 countries](https://docs.versatiles.org/showcases/) show that it is in use worldwide. And the economics are striking: if you serve interactive maps to a large audience, VersaTiles is **a hundred to a thousand times cheaper** than commercial providers.
+VersaTiles is an open map infrastructure – free, open-source and self-hostable. Broadcasters like **NDR and SWR** already host VersaTiles on their own infrastructure; more than [60 showcases across 17 countries](https://versatiles.org/showcases/) show that it is in use worldwide. And the economics are striking: if you serve interactive maps to a large audience, VersaTiles is **a hundred to a thousand times cheaper** than commercial providers.
 
 <div id="cost-chart"></div>
 

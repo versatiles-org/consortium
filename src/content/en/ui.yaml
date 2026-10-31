@@ -42,7 +42,7 @@ demos:
       links:
         - { label: 'VersaTiles website', url: 'https://versatiles.org' }
         - { label: 'Demo map server', url: 'https://tiles.versatiles.org' }
-        - { label: 'Showcases', url: 'https://docs.versatiles.org/showcases/' }
+        - { label: 'Showcases', url: 'https://versatiles.org/showcases/' }
         - { label: 'Playground', url: 'https://versatiles.org/playground/' }
         - { label: 'Set up a server (tool)', url: 'https://versatiles.org/tools/setup_server' }
         - { label: 'Documentation', url: 'https://docs.versatiles.org/' }
