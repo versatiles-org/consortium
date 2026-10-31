@@ -33,20 +33,13 @@ const UiSchema = z.object({
 		title1: z.string(),
 		title2: z.string(),
 		lead: z.string(),
+		status: z.string(),
 		ctaPrimary: z.string(),
 		ctaSecondary: z.string(),
 	}),
 	banner: z.object({
 		heading: z.string(),
 		countLabel: z.string(),
-		sectorsHeading: z.string(),
-		legend: z.object({
-			contacted: z.string(),
-			discussion: z.string(),
-			accepted: z.string(),
-			declined: z.string(),
-		}),
-		sectorGroups: z.record(z.string(), z.string()),
 	}),
 	letter: z.object({
 		heading: z.string(),
