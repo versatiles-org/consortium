@@ -13,6 +13,7 @@
 			<span class="hero__accent"><Lines text={t.title2} /></span>
 		</h1>
 		<p class="lead"><Lines text={t.lead} /></p>
+		<p class="status"><Lines text={t.status} /></p>
 		<!--
 		<div class="actions">
 			<a class="btn btn--primary" href="#aufruf">{t.ctaPrimary}</a>
@@ -69,6 +70,15 @@
 		color: var(--text);
 		max-width: 58ch;
 		margin: 1.25rem auto 0;
+	}
+	.status {
+		max-width: 58ch;
+		margin: 1.5rem auto 0;
+		padding: 0.75rem 1rem;
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: var(--radius);
+		color: var(--text-strong);
 	}
 	/*
 	.hero .actions {

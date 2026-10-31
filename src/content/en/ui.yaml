@@ -11,22 +11,12 @@ hero:
   title1: 'Break free from the platform economy.'
   title2: "Let's make infrastructure open and shared again."
   lead: 'Maps are infrastructure today – yet almost everyone rents them from a handful of large, overpriced platforms. VersaTiles shows that it can be open, independent and many times cheaper. We are now looking for ten organisations to found the first European open-source map consortium with us – for real digital sovereignty.'
+  status: 'We did not reach our goal of ten organisations by 1 September. The founding is paused and will go ahead once ten organisations have committed. Organisations can still commit.'
   ctaPrimary: 'Read the call'
   ctaSecondary: 'Explore VersaTiles'
 banner:
   heading: 'We are looking for 10 partners to found the first open-source map consortium.'
   countLabel: 'founding seats filled'
-  sectorsHeading: 'We are reaching out to organisations from these sectors:'
-  legend:
-    contacted: 'contacted'
-    discussion: 'in talks'
-    accepted: 'accepted'
-    declined: 'declined'
-  sectorGroups:
-    public-broadcasters: 'Public broadcasters'
-    private-media: 'Private media'
-    companies: 'Companies'
-    authorities: 'Public authorities'
 letter:
   heading: "Maps are infrastructure. It's time we treated them that way."
   ctaPrimary: 'Become a founding member'

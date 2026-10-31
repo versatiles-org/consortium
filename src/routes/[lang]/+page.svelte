@@ -45,7 +45,7 @@
 <HeroVisual />
 
 <!-- 2 — Aufruf-Banner mit Live-Zähler -->
-<Banner t={t.banner} {lang} />
+<Banner t={t.banner} />
 
 <!-- 3 — Offener Brief (mit Kostendiagramm) -->
 <Letter letter={t.letter} chart={t.chart} {lang} />

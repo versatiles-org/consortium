@@ -1,37 +1,14 @@
 <script lang="ts">
 	import Lines from '$lib/Lines.svelte';
-	import {
-		MEMBER_TARGET,
-		foundingMembers,
-		sectorStatus,
-		STATUS_ORDER,
-		type FoundingMember,
-		type SectorStatus,
-		type SectorMember,
-	} from '$lib/content.js';
+	import { MEMBER_TARGET, foundingMembers, type FoundingMember } from '$lib/content.js';
 	import { ext } from '$lib/links.js';
 	import type { Copy } from '$lib/copy.js';
 
-	let { t, lang }: { t: Copy['banner']; lang: string } = $props();
+	let { t }: { t: Copy['banner'] } = $props();
 
 	// Visual counter: one slot per target seat, filled in join order.
 	const slots = Array.from({ length: MEMBER_TARGET }, (_, i) => foundingMembers[i] ?? null);
 	const filled = foundingMembers.length;
-
-	const boxLabel = (row: SectorStatus) => STATUS_ORDER.map((s) => `${row.counts[s]} ${t.legend[s]}`).join(', ');
-
-	const fmtDate = (iso: string) =>
-		new Intl.DateTimeFormat(lang, { day: '2-digit', month: '2-digit', year: 'numeric' }).format(new Date(iso));
-
-	// Hover/focus tooltip: one organisation's name + chronological history.
-	// position: fixed, so it can never be clipped or widen the page.
-	let tip: { member: SectorMember; x: number; y: number } | null = $state(null);
-	function showTip(e: Event, member: SectorMember) {
-		const r = (e.currentTarget as HTMLElement).getBoundingClientRect();
-		const x = Math.min(Math.max(r.left + r.width / 2, 110), window.innerWidth - 110);
-		tip = { member, x, y: r.top };
-	}
-	const hideTip = () => (tip = null);
 </script>
 
 <section id="aufruf" class="banner">
@@ -62,50 +39,7 @@
 			{/each}
 		</div>
 		<p class="counter__count"><strong>{filled} / {MEMBER_TARGET}</strong> {t.countLabel}</p>
-
-		<div class="sectors">
-			<h3>{t.sectorsHeading}</h3>
-			<ul class="sectors-list">
-				{#each sectorStatus as row (row.id)}
-					<li class="sector" aria-label={boxLabel(row)}>
-						<span class="sector__name">{t.sectorGroups[row.id]}:</span>
-						{#each row.members as m (m.name)}<button
-								type="button"
-								class="member"
-								aria-label="{m.name}: {t.legend[m.status]}"
-								onpointerenter={(e) => showTip(e, m)}
-								onpointerleave={hideTip}
-								onfocus={(e) => showTip(e, m)}
-								onblur={hideTip}><span class="box box--{m.status}"></span>{m.name}</button
-							>{/each}
-					</li>
-				{/each}
-			</ul>
-			<ul class="legend">
-				<li><span class="box box--contacted"></span>{t.legend.contacted}</li>
-				<li><span class="box box--discussion"></span>{t.legend.discussion}</li>
-				<li><span class="box box--accepted"></span>{t.legend.accepted}</li>
-				<li><span class="box box--declined"></span>{t.legend.declined}</li>
-			</ul>
-		</div>
 	</div>
-
-	{#if tip}
-		<div class="box-tip" style="left: {tip.x}px; top: {tip.y}px">
-			<strong class="box-tip__name">{tip.member.name}</strong>
-			<ul class="box-tip__history">
-				{#each tip.member.history as h (h.date + h.status)}
-					<li>
-						<span class="box-tip__date">{fmtDate(h.date)}</span>
-						<span class="box-tip__status">{t.legend[h.status]}</span>
-						{#if h.note}
-							<span class="box-tip__note">{h.note}</span>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		</div>
-	{/if}
 </section>
 
 <style>
@@ -201,172 +135,9 @@
 	}
 	.counter__count {
 		color: var(--text-muted);
-		margin: 0 0 2rem;
+		margin: 0;
 	}
 	.counter__count strong {
 		color: var(--text-strong);
-	}
-
-	.sectors {
-		max-width: 40rem;
-		margin: 0 auto;
-		text-align: left;
-	}
-	.sectors-list {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		font-size: 0.95rem;
-	}
-	/* Each sector is one line of running text: "label: ☐ ARD, ☐ BR, …".
-	   The organisations wrap naturally like words in a paragraph. */
-	.sector {
-		padding: 0.55rem 0;
-		border-bottom: 1px solid var(--line);
-		line-height: 1.9;
-	}
-	.sector__name {
-		font-weight: 600;
-		color: var(--text-strong);
-		margin-right: 0.35rem;
-	}
-	/* box + organisation name are one hover/focus target, kept apart by a margin rather
-	   than punctuation – the line wraps between two of them.
-	   It is a <button> for keyboard focus, but must read as plain label text – so all
-	   the UA chrome (and the pointer cursor) is stripped. */
-	.member {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.3rem;
-		margin-inline-end: 0.9rem;
-		white-space: nowrap;
-		padding: 0;
-		border: 0;
-		background: none;
-		color: inherit;
-		font: inherit;
-		cursor: inherit;
-	}
-
-	/* One box per organisation, styled by outreach status.
-	   position: relative for the out-of-flow ✓/✗ glyph – see .box--*::after. */
-	.box {
-		box-sizing: border-box;
-		position: relative;
-		width: 14px;
-		height: 14px;
-		border-radius: 3px;
-		flex: none;
-	}
-
-	/* Tooltip: organisation name + chronological history */
-	.box-tip {
-		position: fixed;
-		z-index: 20;
-		transform: translate(-50%, calc(-100% - 10px));
-		min-width: 11rem;
-		max-width: 16rem;
-		padding: 0.5rem 0.65rem;
-		background: var(--surface);
-		border: 1px solid var(--line);
-		border-radius: var(--radius);
-		box-shadow: 0 6px 20px rgb(0 0 0 / 45%);
-		text-align: left;
-		font-size: 0.85rem;
-		line-height: 1.45;
-		pointer-events: none;
-	}
-	.box-tip__name {
-		display: block;
-		margin-bottom: 0.25rem;
-		color: var(--text-strong);
-	}
-	.box-tip__history {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	.box-tip__history li {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0 0.5rem;
-	}
-	.box-tip__date {
-		flex: none;
-		color: var(--text-muted);
-		font-variant-numeric: tabular-nums;
-	}
-	.box-tip__status {
-		color: var(--text);
-	}
-	/* Note wraps onto its own line, indented under the status. */
-	.box-tip__note {
-		flex-basis: 100%;
-		margin-bottom: 0.15rem;
-		color: var(--text-muted);
-		font-size: 0.9em;
-	}
-	/* in talks – filled, but no outcome glyph yet */
-	.box--discussion {
-		background: var(--discuss);
-	}
-	/* The glyph is taken out of flow and centred in the box. In flow it would give the box a
-	   text baseline, and .member (inline-flex) takes its own baseline from the box – which
-	   dropped the accepted/declined entries 3px below the rest of their line. */
-	.box--contacted::after,
-	.box--accepted::after,
-	.box--declined::after {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 10px;
-		font-weight: 700;
-		line-height: 1;
-		color: #fff;
-	}
-	.box--contacted {
-		border: 1.5px solid var(--text-muted);
-		opacity: 0.6;
-	}
-	.box--contacted::after {
-		content: none;
-	}
-	.box--accepted {
-		background: var(--accept);
-	}
-	.box--accepted::after {
-		content: '✓';
-	}
-	.box--declined {
-		background: var(--decline);
-		opacity: 0.3;
-	}
-	.box--declined::after {
-		content: '✗';
-	}
-	.boxes__empty {
-		color: var(--text-muted);
-	}
-
-	.legend {
-		list-style: none;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.4rem 1.1rem;
-		margin: 1rem 0 0;
-		padding: 0;
-		font-size: 0.85rem;
-		color: var(--text-muted);
-	}
-	.legend li {
-		display: flex;
-		align-items: center;
-		gap: 0.4rem;
-	}
-	.legend .box {
-		width: 12px;
-		height: 12px;
 	}
 </style>
