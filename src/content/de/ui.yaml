@@ -1,11 +1,11 @@
 meta:
   title: 'VersaTiles-Konsortium – Digitale Souveränität bei Karten'
-  description: 'Karten sind Infrastruktur. Die Gründung von Europas erstem nutzergetragenen, offenen Kartenkonsortium ist pausiert, bis sich zehn Organisationen gefunden haben, die ihre Karteninfrastruktur mit uns gemeinsam betreiben möchten.'
+  description: 'Karten sind Infrastruktur. Die Kampagne zur Gründung von Europas erstem nutzergetragenen, offenen Kartenkonsortium ist beendet. VersaTiles bleibt ein Open-Source-Projekt.'
   ogImage:
     line1: 'Open-Source-Software ist Infrastruktur.'
     line2: 'Alle können sie nutzen.'
     line3: 'Jemand muss sie finanzieren.'
-    sub: 'Pausiert, bis sich zehn Organisationen gefunden haben.'
+    sub: 'Die Gründungskampagne ist beendet. VersaTiles geht weiter.'
 hero:
   kicker: 'Open Source ist Infrastruktur. Jemand muss sie finanzieren.'
   title1: |-
@@ -13,8 +13,8 @@ hero:
     die sich rechnet.
   title2: |-
     Ein Open-Source-Konsortium für~Karten.
-  lead: 'Derzeit beziehen viele Redaktionen, Behörden und Unternehmen ihre Webkarten von großen, teuren Anbietern außerhalb des EU-Rechtsraums. Unser Open-Source-Projekt „VersaTiles” beweist, dass es auch rechtssicher und hundertmal wirtschaftlicher geht. Wir suchen weiterhin zehn Organisationen, die mit uns das erste nutzergetragene Konsortium für digitale Infrastruktur in Europa gründen möchten.'
-  status: 'Unser Ziel, bis zum 1. September zehn Organisationen zu finden, haben wir nicht erreicht. Die Gründung ist deshalb pausiert und findet statt, sobald zehn Organisationen zugesagt haben. Zusagen sind weiterhin möglich.'
+  lead: 'Derzeit beziehen viele Redaktionen, Behörden und Unternehmen ihre Webkarten von großen, teuren Anbietern außerhalb des EU-Rechtsraums. Unser Open-Source-Projekt „VersaTiles” beweist, dass es auch rechtssicher und hundertmal wirtschaftlicher geht. Mit zehn Organisationen wollten wir das erste nutzergetragene Konsortium für digitale Infrastruktur in Europa gründen.'
+  status: 'Die Gründungskampagne ist beendet: Wir haben keine zehn Organisationen gefunden, das Konsortium wird daher nicht gegründet. VersaTiles bleibt ein Open-Source-Projekt. Wenn deine Organisation darauf aufbaut, unterstütze es bitte direkt über GitHub Sponsors oder Open Collective (siehe unten).'
   ctaPrimary: 'Zum Aufruf'
   ctaSecondary: 'VersaTiles ansehen'
 banner:
@@ -26,7 +26,7 @@ letter:
   heading: |-
     Open-Source-Software ist~Infrastruktur.
     Jemand muss sie finanzieren.
-  ctaPrimary: 'Mitgründer werden'
+  ctaPrimary: 'VersaTiles unterstützen'
   ctaSecondary: 'Kontakt aufnehmen'
 chart:
   title: |-

@@ -27,8 +27,7 @@
 		{/if}
 
 		<div class="actions">
-			<a class="btn btn--primary" href="mailto:mail@versatiles.org?subject=VersaTiles-Konsortium">{letter.ctaPrimary}</a
-			>
+			<a class="btn btn--primary" href="#support">{letter.ctaPrimary}</a>
 		</div>
 	</div>
 </article>

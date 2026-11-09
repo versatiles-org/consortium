@@ -1,17 +1,17 @@
 meta:
   title: 'VersaTiles Consortium – Break free from the platform economy'
-  description: 'Maps are infrastructure. We are looking for ten organisations to found the first European open-source map consortium with us – for real digital sovereignty.'
+  description: 'Maps are infrastructure. Our campaign to found the first European open-source map consortium has ended. VersaTiles continues as an open-source project.'
   ogImage:
     line1: 'Open source software is infrastructure.'
     line2: 'Everyone can use it.'
     line3: 'Somebody has to fund it.'
-    sub: 'Ten organisations. One consortium. Open maps for everyone.'
+    sub: 'The founding campaign has ended. VersaTiles continues.'
 hero:
   kicker: 'Open source is infrastructure. Somebody has to fund it.'
   title1: 'Break free from the platform economy.'
   title2: "Let's make infrastructure open and shared again."
-  lead: 'Maps are infrastructure today – yet almost everyone rents them from a handful of large, overpriced platforms. VersaTiles shows that it can be open, independent and many times cheaper. We are now looking for ten organisations to found the first European open-source map consortium with us – for real digital sovereignty.'
-  status: 'We did not reach our goal of ten organisations by 1 September. The founding is paused and will go ahead once ten organisations have committed. Organisations can still commit.'
+  lead: 'Maps are infrastructure today – yet almost everyone rents them from a handful of large, overpriced platforms. VersaTiles shows that it can be open, independent and many times cheaper. Together with ten organisations, we set out to found the first European open-source map consortium – for real digital sovereignty.'
+  status: 'The founding campaign has ended. We did not find ten founding organisations, so the consortium will not be founded. VersaTiles continues as an open-source project – if your organisation builds on it, please support it directly through GitHub Sponsors or Open Collective (see below).'
   ctaPrimary: 'Read the call'
   ctaSecondary: 'Explore VersaTiles'
 banner:
@@ -19,7 +19,7 @@ banner:
   countLabel: 'founding seats filled'
 letter:
   heading: "Maps are infrastructure. It's time we treated them that way."
-  ctaPrimary: 'Become a founding member'
+  ctaPrimary: 'Support VersaTiles'
   ctaSecondary: 'Get in touch'
   signature: 'Michael Kreil — data journalist, founder of VersaTiles'
 demos:
@@ -102,7 +102,7 @@ demos:
             - { label: 'Animation editor', url: 'https://versatiles.org/versatiles-map-animation/' }
 support:
   heading: 'Every contribution keeps VersaTiles independent.'
-  text: 'Not an organisation, but still want to help? Not everyone can become a founding member – but every contribution helps secure ongoing development and keep VersaTiles independent. One-off or recurring:'
+  text: 'Want to help keep VersaTiles going? Every contribution helps secure ongoing development and keep VersaTiles independent. One-off or recurring:'
 faq:
   heading: 'Questions your organisation will ask'
   items:

@@ -2,7 +2,6 @@
 	import { siteUrl, locales } from '#lib/content.js';
 	import Hero from '#lib/sections/Hero.svelte';
 	import HeroVisual from '#lib/sections/HeroVisual.svelte';
-	import Banner from '#lib/sections/Banner.svelte';
 	import Letter from '#lib/sections/Letter.svelte';
 	import Demos from '#lib/sections/Demos.svelte';
 	import Support from '#lib/sections/Support.svelte';
@@ -43,9 +42,6 @@
 <!-- 1 — Hero -->
 <Hero t={t.hero} />
 <HeroVisual />
-
-<!-- 2 — Aufruf-Banner mit Live-Zähler -->
-<Banner t={t.banner} />
 
 <!-- 3 — Offener Brief (mit Kostendiagramm) -->
 <Letter letter={t.letter} chart={t.chart} {lang} />
